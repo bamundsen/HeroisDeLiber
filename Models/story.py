@@ -47,7 +47,7 @@ class Story:
                     print(player_data_add)
                     player_data_add.append(player_data[i])
                 player_data_add.append(self.to_json(player_data[self.current_act-1]['hero'],
-                                                                          player_data[self.current_act-1]['act'],
+                                                                          player_data[self.current_act]['act'],
                                                                           self.choices)[0])
                 print(player_data_add)
                 return json.dumps(player_data_add) 
