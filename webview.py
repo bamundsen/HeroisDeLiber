@@ -27,15 +27,13 @@ def pick_hero():
     player_data = request.cookies.get('player_data')
     if player_data == None or player_data == "null":
         player_data = story.cookie_values_set(0,hero_picked)
-        resp.set_cookie('player_data', json.dumps(player_data))
+        resp.set_cookie('player_data', json.dumps(player_data), max_age=60*60*24*365*2)
             
     return resp
 
 @app.route('/choose', methods=['POST'])
 def choose():
-    # extrair o cookie
-    # comparar o req com o conteúdo do cookie
-    # devolver cookie
+    # MUDANÇA DE ATO TÁ BUGADA TBM FDS
     story = Story()
     option = request.get_json()
     option = int(option['option'])
@@ -44,13 +42,14 @@ def choose():
     player_data = request.cookies.get('player_data')
     player_data = json.loads(player_data)
     player_data = story.cookie_values_set(player_data, option)
-    # resp = make_response(jsonify(player_data))
-    resp = make_response(player_data)
-    resp.set_cookie('player_data', player_data)
+    event_content = story.get_event_content(json.loads(player_data))
+    resp = make_response(event_content)
+    resp.set_cookie('player_data', player_data, max_age=60*60*24*365*2)
     return resp
 
 @app.route('/loadcookies', methods=['GET'])
 def loadcookies():
+    #TÁ BUGADO
     story = Story()
     player_data = request.cookies.get('player_data')
 

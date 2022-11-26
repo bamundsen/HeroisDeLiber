@@ -13,15 +13,38 @@
             }, 
             {
                 "id":2,
-                "lore":""
+                "lore":"Fase 2"
             },
             {
                 "id":3,
-                "lore":""
+                "lore":"Fase 3"
             },
             {
                 "id":4,
-                "lore":""
+                "lore":"Fase 4"
+            }
+        ]
+    },
+    {
+        "hero": 1,
+        "act_name": "Ato Dois",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "lores": [
+            {
+                "id":1,
+                "lore": "meu cu amore um dia inteiro pra fazer um bagulho simples"
+            }, 
+            {
+                "id":2,
+                "lore":"Fase 2"
+            },
+            {
+                "id":3,
+                "lore":"Fase 3"
+            },
+            {
+                "id":4,
+                "lore":"Fase 4"
             }
         ]
     }

@@ -95,9 +95,21 @@
     }
 
     const response = await fetch('/choose', init);
-    const texts = await response.json();
+    const event_content = await response.json();
     console.log(option);
-    return texts;
+    document.getElementById("act_name").innerHTML = event_content[0];
+    document.getElementById("icon").src = event_content[1];
+    document.getElementById("lore").innerHTML = event_content[2];
+    var options = document.getElementById("options");
+    var picks = options.children;
+    var j = 3;
+    for (var i=0; i < picks.length; i++){
+      var pick = picks[i];
+      pick.innerHTML = event_content[j];
+      j++;
+    }
+
+    return event_content;
   }
 
   window.onload = async function loadcookie(){

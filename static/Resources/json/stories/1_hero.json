@@ -33,6 +33,214 @@
                         "consequence": ""
                     }
                 ]
+            },
+            {
+                "id": 2,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "2",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "2",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "2",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "2",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "3",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "3",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "3",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "3",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "4",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "4",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "4",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "4",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "act":2,
+        "events":[
+            {
+                "id": 1,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "Ir ao vilarejo pedir informação para a população.",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "Seguir para explorar a floresta.",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "Avaliar mais cuidadosamente o mapa.",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "Escalar as árvores para ter um bom ponto de visão.",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "2",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "2",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "2",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "2",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "3",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "3",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "3",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "3",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "4",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "4",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "4",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "4",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
             }
         ]
     }
