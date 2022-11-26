@@ -39,13 +39,14 @@ def choose():
     story = Story()
     option = request.get_json()
     option = int(option['option'])
+    
+    
     player_data = request.cookies.get('player_data')
+    player_data = json.loads(player_data)
     player_data = story.cookie_values_set(player_data, option)
-    
-    resp = make_response(jsonify(player_data))
-    
-    resp.set_cookie('player_data', json.dumps(player_data))
-    
+    # resp = make_response(jsonify(player_data))
+    resp = make_response(player_data)
+    resp.set_cookie('player_data', player_data)
     return resp
 
 @app.route('/loadcookies', methods=['GET'])
@@ -58,7 +59,6 @@ def loadcookies():
     else:
         player_data = json.loads(player_data)
         event_content = story.get_event_content(player_data)
-        print(event_content)
         resp = make_response(event_content)
         return resp
 

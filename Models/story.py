@@ -1,20 +1,13 @@
-from Models.Characters.character import Character
 from Models.StoryLine.character_factory import Character_Factory
-from Models.StoryLine.character_factory import Character_Type
+from flask import jsonify   
 import json
-import math
 
 class Story:
     def __init__(self) :
-        self.hero_value = 100000
-        self.act_value = 10000
-        self.choice_one_value = 1000
-        self.choice_two_value = 100
-        self.choice_three_value = 10
-        self.choice_four_value = 1
         self.hero = 0
-        self.act = 0
-        self.choices = []
+        self.act_change = False
+        self.current_act = 0
+        self.choices = [0,0,0,0]
         self.current_choice = 0
     
     def get_main_text(self, id):
@@ -30,45 +23,40 @@ class Story:
                 return self.story_line_list[0]['lore']
     
     def get_current_choice(self, player_data):
-        for data in player_data['choices']:
-            if data != 0:
+        for i in range(4):
+            if player_data[self.current_act]['choices'][f"c_{i}"] != 0:
                 self.current_choice += int(1)
             else:
                 break
-
-        # self.hero = int(player_data/self.hero_value)
-        # self.act = int((player_data%self.hero_value)/self.act_value)
-        # if self.act == 0:
-        #     self.act = int(1)
-        # choices_mult = 10000
-        # self.choices = []
-        # for i in range(4):
-        #     self.choices.append((int(player_data%choices_mult)/self.choice_one_value))
-        #     if self.choices[i] > 0:
-        #         self.current_choice += int(1)  
-        #     choices_mult = int(choices_mult/10)
             
-        # if self.current_choice >= 4:
-        #         self.act += int(1)
-    
+        if self.current_choice > 3:
+            self.current_choice = int(0)
+            self.current_act = len(player_data)
+            self.act_change = True
+
     def cookie_values_set(self, player_data, new_info):
         if player_data == 0:
-            return self.to_json(new_info, 1, 0, 0, 0, 0)
-
-    def cookie_create(self, new_info):
-        # setting new hero
-        self.story_values_set(new_info*self.hero_value)
-    
-        player_data = int(self.hero*self.hero_value + self.act*self.act_value)
-        counter = int(1000)
-        for data in self.choices:
-            player_data += int(data*counter)
-            counter /= 10
+            return self.to_json(new_info, 1, self.choices)
         
-    
-        return player_data
+        else:
+            self.get_current_choice(player_data)
+            if self.act_change == True:
+                print(type(player_data))
+                player_data_add = []
+                for i in range(self.current_act):
+                    print(player_data_add)
+                    player_data_add.append(player_data[i])
+                player_data_add.append(self.to_json(player_data[self.current_act-1]['hero'],
+                                                                          player_data[self.current_act-1]['act'],
+                                                                          self.choices)[0])
+                print(player_data_add)
+                return json.dumps(player_data_add) 
+            
+            else:
+                player_data[self.current_act]['choices'][f"c_{self.current_choice}"] = new_info
+                return json.dumps(player_data)
 
-
+    # degub methode
     def get_hero_stats(self):
         cf = Character_Factory()
         return cf.create(self.hero)
@@ -78,25 +66,15 @@ class Story:
             event = json.load(events_json)
             event = event[int(player_data[0]['act'])]
         
-        if player_data[0]['hero'] == 1:
-             with open("static/Resources/json/stories/options_knight.json", encoding='utf-8') as options_json:
-                options = json.load(options_json)
-                options = options[int(player_data[0]['act'])]['events'][self.current_choice]['options']
+        with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(player_data[0]['hero'])), encoding='utf-8') as options_json:
+            options = json.load(options_json)
+            options = options[int(player_data[0]['act'])]['events'][self.current_choice]['options']
             
         event_content = [event['act_name'], event['icon'], event['lores'][self.current_choice]['lore']]
         for o in options:
             event_content.append(o['text'])
             
         return event_content
-        # with open("static/Resources/json/stories/events.json", encoding='utf-8') as events_json:
-        #     event = json.load(events_json)
-        #     event = event[self.act]
-            
-        # for i in range(4):
-        #     event_content = [event['act_name'], event['icon'], event['events'][int(i+1)]['lore']]
-        #     if self.choices[i+1] == 0:
-        #         break
-        # return event_content
     
     def get_options_content(self):
         if self.hero == 1:
@@ -111,9 +89,19 @@ class Story:
     
         return options_text
     
-    def to_json(self, hero, act, c_one, c_two, c_three, c_four):
-        player_data = [{"hero": hero,"act": act, "choices":[{"c_one": c_one, "c_two": c_two, "c_three": c_three, "c_four": c_four}]}]
+    def to_json(self, hero, act, c):
+        player_data = [{"hero": hero,"act": act, "choices":{"c_0": c[0], 
+                                                            "c_1": c[1], 
+                                                            "c_2": c[2], 
+                                                            "c_3": c[3]}}]
         return player_data
+    
+    # def create_json(self, hero, act, c):
+    #     player_data = [{"hero": hero,"act": act, "choices":{"c_0": c[0], 
+    #                                                         "c_1": c[1], 
+    #                                                         "c_2": c[2], 
+    #                                                         "c_3": c[3]}}]
+    #     return player_data
     
 if __name__ == '__main__':
     pass
