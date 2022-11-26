@@ -1,0 +1,40 @@
+[
+    {
+        "id": 0
+    },
+    {
+        "act":1,
+        "events":[
+            {
+                "id": 1,
+                "options":[
+                    {
+                        "id": 1,
+                        "text": "Ir ao vilarejo pedir informação para a população.",
+                        "score": 5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 2,
+                        "text": "Seguir para explorar a floresta.",
+                        "score": 0,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 3,
+                        "text": "Avaliar mais cuidadosamente o mapa.",
+                        "score": -5,
+                        "consequence": ""
+                    },
+                    {
+                        "id": 4,
+                        "text": "Escalar as árvores para ter um bom ponto de visão.",
+                        "score": -10,
+                        "consequence": ""
+                    }
+                ]
+            }
+        ]
+    }
+
+]

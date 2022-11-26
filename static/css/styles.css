@@ -1,0 +1,51 @@
+body{
+    background:rgb(16, 5, 23);
+}
+
+.specialFont{
+    color: black;
+    font-family: 'Old English Five', sans-serif;
+}
+
+.lt-specialFont{
+    color: rgb(219, 212, 224);
+    font-family: 'Old English Five', sans-serif;
+}
+
+.bg-color{
+    background:rgb(16, 5, 23);
+}
+
+.lt-bg-color{
+    background-color: rgb(219, 212, 224);
+}
+
+.golden-bg{
+    background-color: goldenrod;
+}
+
+.golden-text{
+    color:goldenrod;
+}
+
+.lt-text-long{
+    color: rgb(219, 212, 224);
+    font-size: medium;
+    font-style: bold;
+}
+
+.lt-text{
+    color: rgb(219, 212, 224);
+    font-style: bold;
+}
+
+.b-text{
+    color: rgb(16, 5, 23);
+    font-style: bold;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: goldenrod;
+    border-color: #285e8e;
+}

@@ -1,0 +1,43 @@
+body{
+    background:rgb(16, 5, 23);
+}
+
+#mainDiv{
+    background-color: rgb(219, 212, 224);
+}
+
+.specialFont{
+    color: black;
+    font-family: 'Old English Five', sans-serif;
+}
+
+.lt-specialFont{
+    color: rgb(219, 212, 224);
+    font-family: 'Old English Five', sans-serif;
+}
+
+.button-one{
+    background-color: rgb(18, 0, 31);
+}
+
+.bg-color{
+    background:rgb(16, 5, 23);
+}
+
+.lt-bg-color{
+    background-color: rgb(219, 212, 224);
+}
+
+.golden-bg{
+    background-color: goldenrod;
+}
+
+.golden-text{
+    color:goldenrod;
+}
+
+.lt-text-long{
+    color: rgb(219, 212, 224);
+    font-size: medium;
+    font-style: bold;
+}

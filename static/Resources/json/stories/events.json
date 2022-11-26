@@ -1,0 +1,28 @@
+[
+    {
+        "id": 0
+    },
+    {
+        "hero": 1,
+        "act_name": "Ato Um",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "lores": [
+            {
+                "id":1,
+                "lore": "Após horas de viagem, você se vê na entrada da floresta, ao lado de um pequeno vilarejo. Você olha o mapa e ele não é muito objetivo, pois a floresta parece bastante densa. Um pouco acima da colina você avista um pequeno vilarejo, algumas pessoas estão curiosas com sua presença, mas pode não ser um bom sinal. O quê você faz?"
+            }, 
+            {
+                "id":2,
+                "lore":""
+            },
+            {
+                "id":3,
+                "lore":""
+            },
+            {
+                "id":4,
+                "lore":""
+            }
+        ]
+    }
+]
