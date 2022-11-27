@@ -10,16 +10,24 @@ class Story:
         self.choices = [0,0,0,0]
         self.current_choice = 0
     
-    def get_main_text(self, id):
-        if id == 0:
-            with open("static/Resources/json/heroes.json", encoding='utf-8') as heroes_list_json:
-                self.heroes_list = json.load(heroes_list_json)
-                return self.heroes_list
+    def get_main_text(self):
+        # if id == 0:
+        #     with open("static/Resources/json/heroes.json", encoding='utf-8') as heroes_list_json:
+        #         heroes_list = json.load(heroes_list_json)
+        #     return heroes_list
                 
-        if id == 1:
-            with open("static/Resources/json/story_line.json", encoding='utf-8') as story_line_list_json:
-                self.story_line_list = json.load(story_line_list_json)
-                return self.story_line_list[0]['lore']
+        # if id == 1:
+        #     with open("static/Resources/json/story_line.json", encoding='utf-8') as story_line_list_json:
+        #         story_line_list = json.load(story_line_list_json)
+        #     return story_line_list[0]['lore']
+        
+        with open("static/Resources/json/heroes.json", encoding='utf-8') as heroes_list_json:
+                heroes_list = json.load(heroes_list_json)
+        with open("static/Resources/json/story_line.json", encoding='utf-8') as story_line_list_json:
+                story_line_list = json.load(story_line_list_json)
+        main_content = {"heroes": heroes_list, "story": story_line_list}
+        return main_content
+    
     
     def get_current_choice_pick(self, player_data):
         self.current_act = len(player_data) - 1
@@ -96,7 +104,7 @@ class Story:
             options_texts.append(o['text'])
             
         event_content = {"act_name": event['act_name'], 
-                   "icon": event['icon'], 
+                   "icon": event['lores'][self.current_choice]['icon'], 
                    "lore": event['lores'][self.current_choice]['lore'], 
                    "options": options_texts}
         
@@ -105,7 +113,11 @@ class Story:
     def get_consequence(self, player_data, option):
         with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(player_data[0]['hero'])), encoding='utf-8') as options_json:
             consequence = json.load(options_json)
-            consequence = consequence[int(player_data[self.current_act]['act'])]['events'][self.current_choice-1]['options'][option-1]['consequence']
+            print(f"SCA: {self.current_act} SCC: {self.current_choice-1} OPTION: {option-1}")
+            if self.current_choice > 0:
+                consequence = consequence[int(player_data[self.current_act]['act'])]['events'][self.current_choice-1]['options'][option-1]['consequence']
+            else:
+                consequence = consequence[int(player_data[self.current_act-1]['act'])]['events'][3]['options'][option-1]['consequence']
         return consequence
     
     def to_json(self, hero, act, c):

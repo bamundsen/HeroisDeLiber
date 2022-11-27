@@ -12,25 +12,25 @@
                         "id": 1,
                         "text": "Ir ao vilarejo pedir informação para a população.",
                         "score": 5,
-                        "consequence": "Consequencia 1"
+                        "consequence": "A população do vilarejo admira um guerreiro, pois é um sinal de proteção e eles colaboram com você dando uma orientação precisa sobre o loca, entretanto avisam se tratar de um lugar perigoso e amaldiçoado."
                     },
                     {
                         "id": 2,
                         "text": "Seguir para explorar a floresta.",
                         "score": 0,
-                        "consequence": "Consequencia 2"
+                        "consequence": "Você caminha pela floresta, que de fato é um labirinto vivo. Você vaga a esmo por horas até encontrar o próximo ponto do mapa e seguir sua missão."
                     },
                     {
                         "id": 3,
                         "text": "Avaliar mais cuidadosamente o mapa.",
                         "score": -5,
-                        "consequence": "Consequencia 3"
+                        "consequence": "Você avalia o mapa cuidadosamente, mas esse não é realmente seu forte. Você se perde algumas vezes, mas eventualmente chega ao ponto do mapa."
                     },
                     {
                         "id": 4,
                         "text": "Escalar as árvores para ter um bom ponto de visão.",
                         "score": -10,
-                        "consequence": "Consequencia 4"
+                        "consequence": "Com muita dificuldade você sobe em uma árvore em um ponto alto da floresta, sua armadura é pesada e vesti-la demora bastante. Você segue nesse fluxo que não é muito preciso, nem muito eficiente até o próximo ponto do mapa."
                     }
                 ]
             },
@@ -39,27 +39,27 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "2",
-                        "score": 5,
-                        "consequence": "Consequencia 1"
+                        "text": "Enfrentar a força do rio através do nado com seu Vigor.",
+                        "score": -10,
+                        "consequence": "Você entra no rio, que é mais fundo do que parece, você aguenta bastante com seu Vigor, entretanto a correnteza forte o atrapalha impedindo que a passagem seja tranquila. Após quase se afogar você atravessa."
                     },
                     {
                         "id": 2,
-                        "text": "2",
-                        "score": 0,
-                        "consequence": "Consequencia 2"
+                        "text": "Tomar um grande impulso com sua Investida e saltar para o outro lado.",
+                        "score": -5,
+                        "consequence": "Você toma impulso para saltar, mas o peso da sua armadura não ajuda em tal tarefa, você passa no máximo oito metros e é obrigado a seguir o restante do caminho pela água, após dificuldades você atravessa."
                     },
                     {
                         "id": 3,
-                        "text": "2",
-                        "score": -5,
-                        "consequence": "Consequencia 3"
+                        "text": "Cortar madeira para tentar criar uma ponte para atravessar para o outro lado.",
+                        "score": 5,
+                        "consequence": "Você corta diversos troncos e carrega facilmente graças a sua Potência, construindo uma pequena ponte que serve de apoio para a travessia, árdua, mas eficiente."
                     },
                     {
                         "id": 4,
-                        "text": "2",
-                        "score": -10,
-                        "consequence": "Consequencia 4"
+                        "text": "Escalar pelos galhos das árvores para chegar ao outro lado.",
+                        "score": -5,
+                        "consequence": "Com muita dificuldade você passa pelo galhos, mas o peso de sua armadura é seu inimigo e você cai na água, tendo que fazer metade do percurso com muita dificuldade na forte correnteza."
                     }
                 ]
             },
@@ -68,30 +68,30 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "3",
-                        "score": 5,
-                        "consequence": "",
+                        "text": "Retirar os troncos pesados da barricada com ajuda de sua Lança de Duas Mãos.",
+                        "score": 0,
+                        "consequence": "Após algum tempo e com esforço, você retira os troncos de seu caminho.",
                         "damage": 20
                     },
                     {
                         "id": 2,
-                        "text": "3",
-                        "score": 0,
-                        "consequence": "",
+                        "text": "Escalar a barricada para chegar ao outro lado.",
+                        "score": -5,
+                        "consequence": "Você tenta escalar a barricada, mas um tronco podre quebra e você cai, causando alguns ferimentos leves.",
                         "damage": 20
                     },
                     {
                         "id": 3,
-                        "text": "3",
-                        "score": -5,
-                        "consequence": "",
+                        "text": "Incendiar a barricada com sua tocha.",
+                        "score": -30,
+                        "consequence": "Você incendeia a barricada, processo inicialente demorado, mas o fogo acaba se epalhando em algumas partes da ravina, além de se queimar você perde tempo tentando conter o incêndio.",
                         "damage": 20
                     },
                     {
                         "id": 4,
-                        "text": "3",
-                        "score": -10,
-                        "consequence": "",
+                        "text": "Usar sua Investida para derrubar a barricada.",
+                        "score": 10,
+                        "consequence": "Sua investida é poderosa o suficiente aliada à sua Potência, você destroça a barricada e libera o caminho.",
                         "damage": 20
                     }
                 ]
@@ -101,27 +101,27 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "4",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Atacar com sua Lança de Duas Mãos.",
+                        "score": 10,
+                        "consequence": "Você avança, quando seus inimigos o percebem você já decapitou o primeiro, agilmente atacou o segundo enquanto se afastou do terceiro, golpeando o último no instante em que ele o alcançou. Liberando seu caminho para a caverna."
                     },
                     {
                         "id": 2,
-                        "text": "4",
+                        "text": "Atacar com sua Espada Curta e Escudo.",
                         "score": 0,
-                        "consequence": ""
+                        "consequence": "Você empunha seu escudo, os inimigos avançam e quando está em seu alcance você golpeia fatalmente o primeiro, mas os inimigos já estão em seu encalço e você acaba sendo mordido por um deles, mas corta sua cabeça e defende o ataque do último com o escudo, para o contra-atacar fatalmente. Liberando seu caminho para a caverna."
                     },
                     {
                         "id": 3,
-                        "text": "4",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "Realizar uma Investida para dentro atropelando quem estiver em seu caminho.",
+                        "score": 0,
+                        "consequence": "Você avança velozmente atropelando um inimigo que bloqueava seu caminho, mas dando tempo para que outro o arranhasse durante a investida, liberando seu caminho para a caverna."
                     },
                     {
                         "id": 4,
-                        "text": "4",
+                        "text": "Passar furtivamente por trás do grupo.",
                         "score": -10,
-                        "consequence": ""
+                        "consequence": "Você se esconde e se esgueira, mas sua armadura o acusa por conta do barulho, os inimigos já estão próximos demais para você se preparar melhor e entra em combate despreparado, após uma luta árdua você tem acesso à caverna."
                     }
                 ]
             }

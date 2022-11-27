@@ -1,7 +1,5 @@
-[
-    {
-        "id": 0,
-        "content": "begin",
-        "lore": "O rei de Líber convoca todos os mais corajosos aventureiros da região para uma missão especial: a recuperação do Diadema Mágico de Jinni, em troca de uma recompensa generosa e o título de Herói ao que completar esta missão que não será fácil, pois tal item está perdido ao fim de uma caverna na Floresta da Noite Eterna. Aliste-se e receba o mapa que levará ao seu objetivo para ser eternamente lembrado."
-    }
-]
+{
+    "id": 0,
+    "content": "begin",
+    "lore": "O rei de Líber convoca todos os mais corajosos aventureiros da região para uma missão especial: a recuperação do Diadema Mágico de Jinni, em troca de uma recompensa generosa e o título de Herói ao que completar esta missão que não será fácil, pois tal item está perdido ao fim de uma caverna na Floresta da Noite Eterna. Aliste-se e receba o mapa que levará ao seu objetivo para ser eternamente lembrado."
+}

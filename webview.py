@@ -10,7 +10,7 @@ def first_page():
     story = Story()
     player_data = request.cookies.get('player_data')
     if player_data == None or player_data == "null":
-        resp = make_response(render_template("html/form.html", main_story=story.get_main_text(1), heroes_info=story.get_main_text(0)))
+        resp = make_response(render_template("html/form.html", main_story=story.get_main_text()))
     else:    
         resp = make_response(render_template("html/story_screen.html"))
     
@@ -33,9 +33,9 @@ def pick_hero():
 
 @app.route('/choose', methods=['POST'])
 def choose():
-    # IMPLEMENTAR MODAL DE CONSEQUENCIA
-    # DANO EM TODAS AS OPÇÕES, IMPLEMENTAR CÁLCULO DE SCORE + DANO EM CADA ESCOLHA
+    
     # IMPLEMENTAR BIFURCAÇÃO NOS ATOS 2, 3 E 4
+    # DANO EM TODAS AS OPÇÕES, IMPLEMENTAR CÁLCULO DE SCORE + DANO EM CADA ESCOLHA
     story = Story()
     option = request.get_json()
     option = int(option['option'])
@@ -44,17 +44,15 @@ def choose():
     player_data = request.cookies.get('player_data')
     player_data = json.loads(player_data)
     player_data = story.cookie_values_set(player_data, option)
-    # event_content = story.get_event_content(json.loads(player_data), False)
-    # consequence = story.get_consequence(json.loads(player_data), option)
     event_content = {"event_content": story.get_event_content(json.loads(player_data), False), 
                      "consequence": story.get_consequence(json.loads(player_data), option)}
+    print(event_content['consequence'])
     resp = make_response(event_content)
     resp.set_cookie('player_data', player_data, max_age=60*60*24*365*2)
     return resp
 
 @app.route('/loadcookies', methods=['GET'])
 def loadcookies():
-    #TÁ BUGADO
     story = Story()
     player_data = request.cookies.get('player_data')
 
