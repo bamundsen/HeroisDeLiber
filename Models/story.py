@@ -22,7 +22,6 @@ class Story:
                 return self.story_line_list[0]['lore']
     
     def get_current_choice_pick(self, player_data):
-        # AJUSTAR O >= 3 ESTÁ CAGANDO TUDO
         self.current_act = len(player_data) - 1
         self.get_current_choice(player_data)
         
@@ -36,7 +35,6 @@ class Story:
         for i in range(4):
             if player_data[self.current_act]['choices'][f"c_{i}"] != 0 and self.current_choice < 4:
                 self.current_choice += int(1)
-                print(self.current_choice)
             else:
                 break
 
@@ -76,6 +74,7 @@ class Story:
         cf = Character_Factory()
         return cf.create(self.hero)
     
+    # CONTEÚDOS DO FRONTEND
     def get_event_content(self, player_data, from_refresh):
         # espaguete
         if from_refresh:
@@ -84,9 +83,6 @@ class Story:
             if self.current_choice > 3:
                 self.current_choice = int(0)
             
-        # BUG DO REFRESH NO ATO 2 RESOLVIDO
-
-        print(f"SELF C ACT: {self.current_act} SELF CURRENT CHOICE: {self.current_choice}")
         with open("static/Resources/json/stories/events.json", encoding='utf-8') as events_json:
             event = json.load(events_json)
             event = event[int(player_data[self.current_act]['act'])]
@@ -94,14 +90,23 @@ class Story:
         with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(player_data[0]['hero'])), encoding='utf-8') as options_json:
             options = json.load(options_json)
             options = options[int(player_data[self.current_act]['act'])]['events'][self.current_choice]['options']
-            
-        event_content = [event['act_name'], 
-                         event['icon'], 
-                         event['lores'][self.current_choice]['lore']]
+        
+        options_texts = []
         for o in options:
-            event_content.append(o['text'])
+            options_texts.append(o['text'])
             
+        event_content = {"act_name": event['act_name'], 
+                   "icon": event['icon'], 
+                   "lore": event['lores'][self.current_choice]['lore'], 
+                   "options": options_texts}
+        
         return event_content
+    
+    def get_consequence(self, player_data, option):
+        with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(player_data[0]['hero'])), encoding='utf-8') as options_json:
+            consequence = json.load(options_json)
+            consequence = consequence[int(player_data[self.current_act]['act'])]['events'][self.current_choice-1]['options'][option-1]['consequence']
+        return consequence
     
     def to_json(self, hero, act, c):
         player_data = [{"hero": hero,"act": act, "choices":{"c_0": c[0], 

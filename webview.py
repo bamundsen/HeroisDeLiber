@@ -33,7 +33,9 @@ def pick_hero():
 
 @app.route('/choose', methods=['POST'])
 def choose():
-    # MUDANÇA DE ATO TÁ BUGADA TBM FDS
+    # IMPLEMENTAR MODAL DE CONSEQUENCIA
+    # DANO EM TODAS AS OPÇÕES, IMPLEMENTAR CÁLCULO DE SCORE + DANO EM CADA ESCOLHA
+    # IMPLEMENTAR BIFURCAÇÃO NOS ATOS 2, 3 E 4
     story = Story()
     option = request.get_json()
     option = int(option['option'])
@@ -42,7 +44,10 @@ def choose():
     player_data = request.cookies.get('player_data')
     player_data = json.loads(player_data)
     player_data = story.cookie_values_set(player_data, option)
-    event_content = story.get_event_content(json.loads(player_data), False)
+    # event_content = story.get_event_content(json.loads(player_data), False)
+    # consequence = story.get_consequence(json.loads(player_data), option)
+    event_content = {"event_content": story.get_event_content(json.loads(player_data), False), 
+                     "consequence": story.get_consequence(json.loads(player_data), option)}
     resp = make_response(event_content)
     resp.set_cookie('player_data', player_data, max_age=60*60*24*365*2)
     return resp
@@ -57,7 +62,8 @@ def loadcookies():
         return redirect("/")
     else:
         player_data = json.loads(player_data)
-        event_content = story.get_event_content(player_data, True)
+        event_content = {"event_content": story.get_event_content(player_data, True), 
+                         "consequence": 0}
         resp = make_response(event_content)
         return resp
 

@@ -3,6 +3,7 @@
         "id": 0
     },
     {
+        "branch": 0,
         "hero": 1,
         "act_name": "Ato Um",
         "icon": "static/Resources/images/scenarios/act_1_1.png",
@@ -26,6 +27,7 @@
         ]
     },
     {
+        "branch": 0,
         "hero": 1,
         "act_name": "Ato Dois",
         "icon": "static/Resources/images/scenarios/act_1_1.png",
