@@ -21,26 +21,33 @@ class Story:
                 self.story_line_list = json.load(story_line_list_json)
                 return self.story_line_list[0]['lore']
     
-    def get_current_choice(self, player_data):
-        
+    def get_current_choice_pick(self, player_data):
+        # AJUSTAR O >= 3 ESTÁ CAGANDO TUDO
         self.current_act = len(player_data) - 1
-        for i in range(4):
-            if player_data[self.current_act]['choices'][f"c_{i}"] != 0:
-                self.current_choice += int(1)
-            else:
-                break  
-        if self.current_choice > 3:
-            self.current_choice = int(0)
+        self.get_current_choice(player_data)
+        
+        if self.current_choice >= 3:
+        # if self.current_choice > 3:
+            # self.current_choice = int(0)
             self.current_act = len(player_data)
             self.act_change = True
+            
+    def get_current_choice(self, player_data):
+        for i in range(4):
+            if player_data[self.current_act]['choices'][f"c_{i}"] != 0 and self.current_choice < 4:
+                self.current_choice += int(1)
+                print(self.current_choice)
+            else:
+                break
 
     def cookie_values_set(self, player_data, new_info):
         if player_data == 0:
             return self.to_json(new_info, 1, self.choices)
         
         else:
-            self.get_current_choice(player_data)
-            if self.act_change == True:
+            self.get_current_choice_pick(player_data)
+            if self.act_change:
+                player_data[self.current_act-1]['choices'][f"c_{self.current_choice}"] = new_info
                 player_data_add = []
                 for i in range(self.current_act):
                     player_data_add.append(player_data[i])
@@ -48,31 +55,44 @@ class Story:
                 player_data_add.append(self.to_json(player_data[0]['hero'],
                                                     self.current_act+1,
                                                     self.choices)[0])
+                self.current_choice = int(0)
                 return json.dumps(player_data_add) 
             
             else:
                 player_data[self.current_act]['choices'][f"c_{self.current_choice}"] = new_info
+                
                 # espaguete
-                if self.current_choice <3 :
+                if self.current_choice < 3 :
                     self.current_choice += 1
                 else:
                     self.current_choice = 0
+                if self.act_change == True:
+                    self.current_act += 1
+                    
                 return json.dumps(player_data)
 
-    # degub methode
+    # degub method
     def get_hero_stats(self):
         cf = Character_Factory()
         return cf.create(self.hero)
     
-    def get_event_content(self, player_data):
-        
+    def get_event_content(self, player_data, from_refresh):
+        # espaguete
+        if from_refresh:
+            self.current_act = int(len(player_data)-1)
+            self.get_current_choice(player_data)
+            if self.current_choice > 3:
+                self.current_choice = int(0)
+            
+        # BUG DO REFRESH NO ATO 2 RESOLVIDO
+
+        print(f"SELF C ACT: {self.current_act} SELF CURRENT CHOICE: {self.current_choice}")
         with open("static/Resources/json/stories/events.json", encoding='utf-8') as events_json:
             event = json.load(events_json)
             event = event[int(player_data[self.current_act]['act'])]
         
         with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(player_data[0]['hero'])), encoding='utf-8') as options_json:
             options = json.load(options_json)
-            print(f"SELF CURRENT ACT {self.current_act} SELF CURRENT CHOICE: {self.current_choice}")
             options = options[int(player_data[self.current_act]['act'])]['events'][self.current_choice]['options']
             
         event_content = [event['act_name'], 

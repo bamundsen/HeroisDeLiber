@@ -42,7 +42,7 @@ def choose():
     player_data = request.cookies.get('player_data')
     player_data = json.loads(player_data)
     player_data = story.cookie_values_set(player_data, option)
-    event_content = story.get_event_content(json.loads(player_data))
+    event_content = story.get_event_content(json.loads(player_data), False)
     resp = make_response(event_content)
     resp.set_cookie('player_data', player_data, max_age=60*60*24*365*2)
     return resp
@@ -57,7 +57,7 @@ def loadcookies():
         return redirect("/")
     else:
         player_data = json.loads(player_data)
-        event_content = story.get_event_content(player_data)
+        event_content = story.get_event_content(player_data, True)
         resp = make_response(event_content)
         return resp
 
