@@ -38,6 +38,7 @@
   }
 
   window.onload = async function loadcookie(){
+    document.getElementById("bgm").play();
     const response = await fetch('/loadcookies');
     const content = await response.json();
     console.log(content);
@@ -50,6 +51,5 @@
       var pick = picks[i];
       pick.innerHTML = content['event_content']['options'][i];
     }
-
     return content;
   }
