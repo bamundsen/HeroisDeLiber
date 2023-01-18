@@ -20,13 +20,13 @@ class Character_Factory:
         with open("static/Resources/json/heroes.json", encoding='utf-8') as heroes_list_json:
             heroes_list = json.load(heroes_list_json)
         
-        if character_type == Character_Type.GUERREIRO:
+        if character_type == Character_Type.GUERREIRO.value:
             return Warrior(heroes_list[0]['name'], heroes_list[0]['hp'], heroes_list[0]['defense'], heroes_list[0]['attack_1'], heroes_list[0]['attack_2'], heroes_list[0]['ability_1'], heroes_list[0]['ability_2'], heroes_list[0]['quintessence'], heroes_list[0]['icon'])
-        if character_type == Character_Type.MAGO:
+        if character_type == Character_Type.MAGO.value:
             return Wizard(heroes_list[1]['name'], heroes_list[1]['hp'], heroes_list[1]['defense'], heroes_list[1]['attack_1'], heroes_list[1]['attack_2'], heroes_list[1]['ability_1'], heroes_list[1]['ability_2'], heroes_list[1]['quintessence'], heroes_list[1]['icon'])
-        if character_type == Character_Type.LADINO:
+        if character_type == Character_Type.LADINO.value:
             return Rogue(heroes_list[2]['name'], heroes_list[2]['hp'], heroes_list[2]['defense'], heroes_list[2]['attack_1'], heroes_list[2]['attack_2'], heroes_list[2]['ability_1'], heroes_list[2]['ability_2'], heroes_list[2]['quintessence'], heroes_list[2]['icon'])
-        if character_type == Character_Type.CLERIGO:
+        if character_type == Character_Type.CLERIGO.value:
             return Cleric(heroes_list[3]['name'], heroes_list[3]['hp'], heroes_list[3]['defense'], heroes_list[3]['attack_1'], heroes_list[3]['attack_2'], heroes_list[3]['ability_1'], heroes_list[3]['ability_2'], heroes_list[3]['quintessence'], heroes_list[3]['icon'])
         else:
             return None
