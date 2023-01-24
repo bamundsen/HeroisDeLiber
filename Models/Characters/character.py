@@ -9,15 +9,19 @@ class Character:
         self.ability_2 = ability_2
         self.quintessence = quintessence
         self.icon = icon
+        self.score = 100
 
     def attack(self, defense_enemy):
         pass
     
-    def get_damagge(self, attack_enemy):
-        pass
+    def get_hp(self, damage):
+        damage -= damage*(self.defense/200)
+        self.hp -= damage
+        return self.hp
     
-    def healing(self, healing_source):
-        pass
+    def get_score(self, score):
+        self.score += score
+        return self.score
     
 
 

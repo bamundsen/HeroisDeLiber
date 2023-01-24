@@ -1,0 +1,58 @@
+[
+    {
+        "branch": 0,
+        "hero": 1,
+        "act_name": "Ato Quatro",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "lores": [
+            {
+                "id":1,
+                "icon": "static/Resources/images/scenarios/act_1_1.png",
+                "lore": "Após horas de viagem, você se vê na entrada da floresta, ao lado de um pequeno vilarejo. Você olha o mapa e ele não é muito objetivo, pois a floresta parece bastante densa. Um pouco acima da colina você avista um pequeno vilarejo, algumas pessoas estão curiosas com sua presença, mas pode não ser um bom sinal. O quê você faz?"
+            }, 
+            {
+                "id":2,
+                "icon": "static/Resources/images/scenarios/act_1_1.png",
+                "lore":"Você caminhou floresta adentro por horas, até que se deparou com um rio de aproximadamente 15 metros de largura que passa por seu caminho, a densidade da floresta e o tempo são seus inimigos. A copa das árvores é alta e os galhos robustos, o som do riacho é quase ensurdecedor devida sua força."
+            },
+            {
+                "id":3,
+                "icon": "static/Resources/images/scenarios/act_1_1.png",
+                "lore":"Você segiu seu curso conforme planejado. Ao olhar o mapa você vê que deve passar por uma grande ravina na floresta, que você encontra sem grandes dificuldades, a ravina é extremamente escura, mas nesse ponto você teme chamar atenção pois os animais estão quietos. Em certo ponto estreito da ravina você avista uma barricada feita de entulhos e troncos, que parece estar aí há muito tempo pois está coberta pela vegetação. Este é o único caminho."
+            },
+            {
+                "id":4,
+                "icon": "static/Resources/images/scenarios/act_1_2.png",
+                "lore":"Após uma descida na colina após a ravina, você vê uma clareira em um vale. O local é rochoso e poucas coisas nascem ali em contraste com o resto da floresta. Você avista 3 figuras, ao analisar cuidadosamente não restam dúvidas: há três zumbis ali, próximos à entrada da caverna, passar por ali chamará atenção deles."
+            }
+        ]
+    },
+    {
+        "branch": 1,
+        "hero": 1,
+        "act_name": "Ato Quatro",
+        "icon": "static/Resources/images/scenarios/act_2_1.png",
+        "lores": [
+            {
+                "id":1,
+                "icon": "static/Resources/images/scenarios/act_2_1.png",
+                "lore": "Fase 1"
+            }, 
+            {
+                "id":2,
+                "icon": "static/Resources/images/scenarios/act_2_1.png",
+                "lore":"Fase 2"
+            },
+            {
+                "id":3,
+                "icon": "static/Resources/images/scenarios/act_2_1.png",
+                "lore":"Fase 3"
+            },
+            {
+                "id":4,
+                "icon": "static/Resources/images/scenarios/act_2_2.png",
+                "lore":"Fase 4"
+            }
+        ]
+    }
+]

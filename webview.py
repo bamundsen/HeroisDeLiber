@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, flash, redirect, make_response, jsonify
-from Models.StoryLine.character_factory import Character_Type, Character_Factory
-from Models.story import Story, StoryFacade
+from Models.story import StoryFacade
 import json
 
 app = Flask(__name__)
@@ -44,24 +43,6 @@ def pick_hero():
 
 @app.route('/choose', methods=['POST'])
 def choose():
-    
-    # IMPLEMENTAR BIFURCAÇÃO NOS ATOS 2, 3 E 4
-    # DANO EM TODAS AS OPÇÕES, IMPLEMENTAR CÁLCULO DE SCORE + DANO EM CADA ESCOLHA
-    # story = Story()
-    
-    # option = request.get_json()
-    # option = int(option['option'])
-    
-    
-    # player_data = request.cookies.get('player_data')
-    # player_data = json.loads(player_data)
-    # player_data = story.cookie_values_set(player_data, option)
-    # event_content = {"event_content": story.get_event_content(json.loads(player_data), False), 
-    #                  "consequence": story.get_consequence(json.loads(player_data), option)}
-    
-    # resp = make_response(event_content)
-    # resp.set_cookie('player_data', player_data, max_age=60*60*24*365*2)
-    
     option = request.get_json()
     option = int(option['option'])
     player_data = request.cookies.get('player_data')
@@ -70,7 +51,9 @@ def choose():
     story_facade = StoryFacade(player_data, option, False)
   
     resp = make_response(story_facade.pick_choice())
-    print(type(player_data))
+    hero = story_facade.get_hero_damage()
+    if hero.hp < 100:
+        print ("hero is dying")
     resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
     return resp
 

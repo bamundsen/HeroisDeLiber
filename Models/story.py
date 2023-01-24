@@ -66,7 +66,6 @@ class Story:
                                                     self.current_act+1,
                                                     self.choices)[0])
                 self.current_choice = int(0)
-                print(f"SCA: {self.current_act} SCC: {self.current_choice-1} OPTION: {self.new_choice-1}")
                 self.player_data = player_data_add
                 return json.dumps(self.player_data) 
             
@@ -89,24 +88,89 @@ class Story:
     
     # CONTEÚDOS DO FRONTEND
     def get_event_content(self):
+        if self.from_refresh:
+            self.current_act = int(len(self.player_data)-1) 
+            self.get_current_choice()
+            if self.current_choice > 3:
+                self.current_choice = int(0)
 
         if len(self.player_data) < 3:
-            story_lore = StoryLore(NoBranchLore(self))
+            contents = StoryLore(NoBranchLore(self, self.current_act, self.current_choice)).return_content()
             
         if len(self.player_data) == 3:
-            story_lore = StoryLore(BranchLore(self))
+            contents = StoryLore(BranchLoreOne(self, self.current_choice)).return_content()
         
-        return story_lore.return_content()
+        if len(self.player_data) == 4:
+            contents = StoryLore(BranchLoreTwo(self, self.current_choice)).return_content()
+        
+        options_texts = []
+        for o in contents['options']:
+            options_texts.append(o['text'])
+            
+        event_content = {"act_name": contents['event']['act_name'], 
+                   "icon": contents['event']['lores'][self.current_choice]['icon'], 
+                   "lore": contents['event']['lores'][self.current_choice]['lore'], 
+                   "options": options_texts}
+
+        return event_content
     
     def get_consequence(self):
      
         if len(self.player_data) < 3:
-            story_lore = StoryLore(NoBranchLore(self))
+            story_lore = StoryLore(NoBranchLore(self, self.current_act, self.current_choice))
             
         if len(self.player_data) == 3:
-            story_lore = StoryLore(BranchLore(self))
+            story_lore = StoryLore(BranchLoreOne(self, self.current_choice))
+            
+        if len(self.player_data) == 4:
+            story_lore = StoryLore(BranchLoreTwo(self, self.current_choice))
         
         return story_lore.return_consequence()
+    
+    def damage_hp_and_score(self, hero):
+        for index, data in enumerate(self.player_data, start=0):
+            if hero.hp < 1:
+                break
+            # if len(self.player_data) < 3:
+            #     contents = StoryLore(NoBranchLore(self)).return_content()
+            # if len(self.player_data) == 3:
+            #     contents = StoryLore(BranchLoreOne(self)).return_content()
+            # if len(self.player_data) == 4:
+            #     contents = StoryLore(BranchLoreTwo(self)).return_content()
+
+            
+            c = 0
+            for count, choice in enumerate(data['choices'], start=0):   
+                if data['choices'][choice] > 0:
+                    if index < 2:
+                        print(index)
+                        contents = StoryLore(NoBranchLore(self, index, count)).return_content()
+                    if index == 2:
+                        contents = StoryLore(BranchLoreOne(self, count)).return_content()          
+                    if index == 3:
+                        contents = StoryLore(BranchLoreTwo(self, count)).return_content()
+                    if len(self.player_data) < 3:
+                        if self.from_refresh:
+                            self.current_act = int(len(self.player_data)-1)
+                            self.get_current_choice()
+                            if self.current_choice > 3:
+                                self.current_choice = int(0)
+                        
+                    damage = contents['options'][data['choices'][choice]-1]['damage']
+                    score = contents['options'][data['choices'][choice]-1]['score']
+                    c += 1
+                    hero.get_hp(damage)
+                    hero.get_score(score)
+                    if hero.hp < 1:
+                        break
+                    print(hero.hp)
+                    print(hero.score)
+                else:
+                    break
+        
+    
+    def damage_score(self):
+        pass
     
     def to_json(self, hero, act, c):
         player_data = [{"hero": hero,"act": act, "choices":{"c_0": c[0], 
@@ -143,11 +207,13 @@ class StoryFacade:
     def display_player_data(self):
         return json.dumps(self.story.player_data)
         
-    #debugmethode
-    def get_hero_status(self):
-        print(self.story.hero)
-        hero = self.character_factory.create(self.story.hero)
-        return hero.ability_1
+    def get_hero_damage(self):
+        if self.story.hero != None:
+            hero = self.character_factory.create(self.story.hero)
+            
+            self.story.damage_hp_and_score(hero)
+            return hero
+    
     
 class StoryLore:
     def __init__(self, branch_content):
@@ -168,57 +234,50 @@ class Ilore(ABC):
         pass
 
 class NoBranchLore(Ilore):
-    def __init__(self, story):
+    def __init__(self, story, act, current_choice):
         self.story = story
+        self.act = act
+        self.current_choice = current_choice
         
     def select_content(self):
-        if self.story.from_refresh:
-            self.story.current_act = int(len(self.story.player_data)-1)
-            self.story.get_current_choice()
-            if self.story.current_choice > 3:
-                self.story.current_choice = int(0)
+        # if self.story.from_refresh:
+        #     self.story.current_act = int(len(self.story.player_data)-1) 
+        #     self.story.get_current_choice()
+        #     if self.story.current_choice > 3:
+        #         self.story.current_choice = int(0)
             
         with open("static/Resources/json/stories/events.json", encoding='utf-8') as events_json:
             event = json.load(events_json)
-            event = event[int(self.story.player_data[self.story.current_act]['act'])]
+            event = event[int(self.story.player_data[self.act]['act'])]
         
         with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(self.story.player_data[0]['hero'])), encoding='utf-8') as options_json:
             options = json.load(options_json)
-            options = options[int(self.story.player_data[self.story.current_act]['act'])]['events'][self.story.current_choice]['options']
+            options = options[int(self.story.player_data[self.act]['act'])]['events'][self.current_choice]['options']
         
-        options_texts = []
-        for o in options:
-            options_texts.append(o['text'])
-            
-        event_content = {"act_name": event['act_name'], 
-                   "icon": event['lores'][self.story.current_choice]['icon'], 
-                   "lore": event['lores'][self.story.current_choice]['lore'], 
-                   "options": options_texts}
-
-        return event_content
+        contents = {"event": event, "options": options}
+        return contents
     
     def select_consequence(self):
         with open("static/Resources/json/stories/{hero}_hero.json".format(hero = int(self.story.player_data[0]['hero'])), encoding='utf-8') as options_json:
             consequence = json.load(options_json)
-            print(f"SCA: {self.story.current_act} SCC: {self.story.current_choice-1} OPTION: {self.story.new_choice-1}")
-            if self.story.current_choice > 0:
-                consequence = consequence[int(self.story.player_data[self.story.current_act]['act'])]['events'][self.story.current_choice-1]['options'][self.story.new_choice-1]['consequence']
+            if self.current_choice > 0:
+                consequence = consequence[int(self.story.player_data[self.story.current_act]['act'])]['events'][self.current_choice-1]['options'][self.story.new_choice-1]['consequence']
             else:
                 consequence = consequence[int(self.story.player_data[self.story.current_act-1]['act'])]['events'][3]['options'][self.story.new_choice-1]['consequence']
         
         return consequence
     
-class BranchLore(Ilore):
-    def __init__(self, story):
+class BranchLoreOne(Ilore):
+    def __init__(self, story, current_choice):
         self.story = story
+        self.current_choice = current_choice
         
     def select_content(self):
-        if self.story.from_refresh:
-            self.story.current_act = int(len(self.story.player_data)-1)
-            self.story.get_current_choice()
-            print(self.story.current_choice)
-            if self.story.current_choice > 3:
-                self.story.current_choice = int(0)
+        # if self.story.from_refresh:
+        #     self.story.current_act = int(len(self.story.player_data)-1)
+        #     self.story.get_current_choice()
+        #     if self.story.current_choice > 3:
+        #         self.story.current_choice = int(0)
         
         branch_choice = int(self.story.player_data[1]['choices']['c_3']) -1
         
@@ -228,29 +287,62 @@ class BranchLore(Ilore):
             
         with open("static/Resources/json/stories/{hero}.0_hero.json".format(hero = int(self.story.player_data[0]['hero']), branch = branch_choice), encoding='utf-8') as options_json:
             options = json.load(options_json)
-            options = options[branch_choice]['events'][self.story.current_choice]['options']
-            
-        options_texts = []
-        for o in options:
-            options_texts.append(o['text'])
-                
-        event_content = {"act_name": event['act_name'], 
-                "icon": event['lores'][self.story.current_choice]['icon'], 
-                "lore": event['lores'][self.story.current_choice]['lore'], 
-                "options": options_texts}
-
-        return event_content
+            options = options[branch_choice]['events'][self.current_choice]['options']
+        
+        contents = {"event": event, "options": options}
+        return contents
     
     def select_consequence(self):
         branch_choice = int(self.story.player_data[1]['choices']['c_3']) -1
         
-        with open("static/Resources/json/stories/{hero}.0_hero.json".format(hero = int(self.story.player_data[0]['hero']), branch = branch_choice), encoding='utf-8') as options_json:
+        with open("static/Resources/json/stories/{hero}.0_hero.json".format(hero = int(self.story.player_data[0]['hero'])), encoding='utf-8') as options_json:
             consequence = json.load(options_json)
-            print(f"SCA: {self.story.current_act} SCC: {self.story.current_choice-1} OPTION: {self.story.new_choice-1}")
-            if self.story.current_choice > 0:
-                consequence = consequence[branch_choice]['events'][self.story.current_choice-1]['options'][self.story.new_choice-1]['consequence']
+            
+            if self.current_choice > 0:
+                consequence = consequence[branch_choice]['events'][self.current_choice-1]['options'][self.story.new_choice-1]['consequence']
             else:
                 consequence = consequence[branch_choice]['events'][3]['options'][self.story.new_choice-1]['consequence']
+        
+        return consequence
+
+    
+class BranchLoreTwo(Ilore):
+    def __init__(self, story, current_choice):
+        self.story = story
+        self.current_choice = current_choice
+        
+    def select_content(self):
+        # if self.story.from_refresh:
+        #     self.story.current_act = int(len(self.story.player_data)-1)
+        #     self.story.get_current_choice()
+        #     if self.story.current_choice > 3:
+        #         self.story.current_choice = int(0)
+        
+        branch_choice_one = int(self.story.player_data[1]['choices']['c_3']) -1
+        branch_choice_two = int(self.story.player_data[2]['choices']['c_3']) -1
+        
+        with open("static/Resources/json/stories/0.{bc1}_events.json".format(bc1 = branch_choice_one), encoding='utf-8') as events_json:
+            event = json.load(events_json)
+            event = event[branch_choice_two]
+            
+        with open("static/Resources/json/stories/{hero}.0.{bc1}_hero.json".format(hero = int(self.story.player_data[0]['hero']), bc1 = branch_choice_one), encoding='utf-8') as options_json:
+            options = json.load(options_json)
+            options = options[branch_choice_two]['events'][self.current_choice]['options']
+            
+        contents = {"event": event, "options": options}
+        return contents
+    
+    def select_consequence(self):
+        branch_choice_one = int(self.story.player_data[1]['choices']['c_3']) -1
+        branch_choice_two = int(self.story.player_data[2]['choices']['c_3']) -1
+        
+        with open("static/Resources/json/stories/{hero}.0.{bc1}_hero.json".format(hero = int(self.story.player_data[0]['hero']), bc1 = branch_choice_one), encoding='utf-8') as options_json:
+            consequence = json.load(options_json)
+
+            if self.current_choice > 0:
+                consequence = consequence[branch_choice_two]['events'][self.current_choice-1]['options'][self.story.new_choice-1]['consequence']
+            else:
+                consequence = consequence[branch_choice_two]['events'][3]['options'][self.story.new_choice-1]['consequence']
         
         return consequence
     
