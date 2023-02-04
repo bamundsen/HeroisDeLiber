@@ -12,6 +12,7 @@ class Character_Type(Enum):
     LADINO = 3
     CLERIGO = 4
     
+# INÍCIO DO PADRÃO FACTORY
 class Character_Factory:
     
     @staticmethod

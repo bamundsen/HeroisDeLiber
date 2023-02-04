@@ -18,18 +18,7 @@ def first_page():
 
 @app.route('/', methods=['POST'])
 def pick_hero():
-    # story = Story()
-    
-    # hero_picked = int(request.form.get('hero_picked'))
-    
-    # resp = make_response(render_template('html/story_screen.html'))
-    
-    # player_data = request.cookies.get('player_data')
-    # if player_data == None or player_data == "null":
-    #     player_data = story.cookie_values_set(0,hero_picked)
-    #     resp.set_cookie('player_data', json.dumps(player_data), max_age=60*60*24*365*2)
-        
-    
+  
     hero_picked = int(request.form.get('hero_picked'))
     resp = make_response(render_template('html/story_screen.html'))
     player_data = request.cookies.get('player_data')
