@@ -39,12 +39,11 @@ def choose():
     story_facade = StoryFacade(player_data, option, False)
     content_response = story_facade.pick_choice()
   
-    if story_facade.story.is_history_finished == False:
+    if story_facade.story.is_history_finished == False and story_facade.story.is_hero_alive == True:
         resp = make_response(content_response)
         resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
     
     else:
-        print("RENDOU SQN")
         resp = make_response({'end': "yes"})
         resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
         # resp = redirect("html/ending.html")
@@ -65,15 +64,20 @@ def loadcookies():
 
 @app.route('/storyend', methods=['GET'])
 def story_end():
-    # return redirect(url_for("html/ending.html"))
     try:
         player_data = json.loads(request.cookies.get('player_data'))
     except:
         return redirect("/")
-    else:
-        print(player_data)
-        resp = make_response(render_template("html/ending.html"))
+
+    story_facade = StoryFacade(player_data, -1, False)
+    if story_facade.check_ending() == True:
+        story_facade.ending_picker()
+        ending = story_facade.ending_picker()
+        print(ending)
+        resp = make_response(render_template("html/ending.html", ending=ending))
         resp.delete_cookie('player_data')
-        return resp
+    else:
+        return redirect("/")
+    return resp
 
 app.run(debug=True)

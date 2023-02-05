@@ -1,16 +1,13 @@
 [
     {
-        "id": 0
-    },
-    {
-        "act":1,
+        "act":4,
         "events":[
             {
                 "id": 1,
                 "options":[
                     {
                         "id": 1,
-                        "text": "Ir ao vilarejo pedir informação para a população.",
+                        "text": "BRENCH 0 CHECK",
                         "score": 5,
                         "damage": 0,
                         "consequence": "A população do vilarejo admira um guerreiro, pois é um sinal de proteção e eles colaboram com você dando uma orientação precisa sobre o loca, entretanto avisam se tratar de um lugar perigoso e amaldiçoado."
@@ -140,7 +137,7 @@
         ]
     },
     {
-        "act":2,
+        "act":4,
         "events":[
             {
                 "id": 1,
@@ -149,28 +146,24 @@
                         "id": 1,
                         "text": "FINALMENTE",
                         "score": 5,
-                        "damage": 0,
                         "consequence": ""
                     },
                     {
                         "id": 2,
                         "text": "TRASICAO",
                         "score": 0,
-                        "damage": 0,
                         "consequence": ""
                     },
                     {
                         "id": 3,
                         "text": "DE ATO",
                         "score": -5,
-                        "damage": 10,
                         "consequence": ""
                     },
                     {
                         "id": 4,
                         "text": "FUNCIONANDO",
                         "score": -10,
-                        "damage": 20,
                         "consequence": ""
                     }
                 ]
@@ -182,28 +175,24 @@
                         "id": 1,
                         "text": "2",
                         "score": 5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 2,
                         "text": "2",
                         "score": 0,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 3,
                         "text": "2",
                         "score": -5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 4,
                         "text": "2",
                         "score": -10,
-                        "damage": 20,
                         "consequence": ""
                     }
                 ]
@@ -215,28 +204,24 @@
                         "id": 1,
                         "text": "3",
                         "score": 5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 2,
                         "text": "3",
                         "score": 0,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 3,
                         "text": "3",
                         "score": -5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 4,
                         "text": "3",
                         "score": -10,
-                        "damage": 20,
                         "consequence": ""
                     }
                 ]
@@ -248,28 +233,24 @@
                         "id": 1,
                         "text": "4",
                         "score": 5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 2,
                         "text": "4",
                         "score": 0,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 3,
-                        "text": "",
+                        "text": "4",
                         "score": -5,
-                        "damage": 20,
                         "consequence": ""
                     },
                     {
                         "id": 4,
-                        "text": "",
+                        "text": "4",
                         "score": -10,
-                        "damage": 20,
                         "consequence": ""
                     }
                 ]

@@ -99,7 +99,7 @@ class Story:
         if self.is_history_finished == True:
             # event content de final
             pass
-        if self.is_hero_alive:
+        if self.is_hero_alive == True:
             event_content = {"event_content": self.get_event_content(), "hero_scores": self.damage_hp_and_score(), 
                      "consequence": self.get_consequence()}
         else:
@@ -137,6 +137,28 @@ class Story:
         hero_scores = {"hp": hero.hp, "score": hero.score}
         return hero_scores
         
+    def check_ending(self):
+        if len(self.player_data) == 4 and self.player_data[3]["choices"]["c_3"] != 0:
+            return True
+        else:
+            return False
+
+    def ending_picker(self):
+        scoring = str(int(self.player_data[1]["choices"]["c_3"] +
+         (self.player_data[2]["choices"]["c_3"]*10) + 
+         (self.player_data[3]["choices"]["c_3"]*100)))
+        hero_scores = self.damage_hp_and_score()
+        with open("static/Resources/json/stories/endings.json", encoding='utf-8') as events_json:
+            endings = json.load(events_json)
+        if self.is_hero_alive == True:
+            if hero_scores['score'] < 100:
+                return endings[9]
+            else:
+                for ending in endings:
+                    if ending['scoring'] == scoring:
+                        return ending
+        else:
+            return endings[0]
 
     def to_json(self, hero, act, c):
         player_data = [{"hero": hero,"act": act, "choices":{"c_0": c[0], 
@@ -170,6 +192,12 @@ class StoryFacade:
     
     def display_player_data(self):
         return json.dumps(self.story.player_data)
+    
+    def check_ending(self):
+        return self.story.check_ending()
+        
+    def ending_picker(self):
+        return self.story.ending_picker()
             
 # FIM DO PADRÃO FACADE
     

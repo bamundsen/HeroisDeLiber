@@ -18,13 +18,12 @@
       body: JSON.stringify(option)
     }
 
-    const response = await fetch('/choose', init);
-    const content = await response.json();
-    console.log(content);
-
+      const response = await fetch('/choose', init);
+      const content = await response.json();
+      console.log(content);
+    
     if (content['end'] === "yes")
     {
-      
       return window.location.replace("/storyend");
     }
     else {
@@ -39,10 +38,16 @@
       for (var i=0; i < content['event_content']['options'].length; i++){
         var pick = picks[i];
         pick.innerHTML = content['event_content']['options'][i];
+        if (content['event_content']['options'][i] === ""){
+          pick.style.visibility='hidden';
+        }
+        else{
+          pick.style.visibility='visible';
+        }
       }
 
       return content;
-  }
+    }
   }
 
   window.onload = async function loadcookie(){
@@ -58,6 +63,12 @@
     for (var i=0; i < content['event_content']['options'].length; i++){
       var pick = picks[i];
       pick.innerHTML = content['event_content']['options'][i];
+      if (content['event_content']['options'][i] === ""){
+        pick.style.visibility='hidden';
+      }
+      else{
+        pick.style.visibility='visible';
+      }
     }
     return content;
   }

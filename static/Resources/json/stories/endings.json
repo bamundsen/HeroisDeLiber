@@ -1,0 +1,52 @@
+[
+    {
+        "scoring": "000",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "Seu herói não aguentou aos ferimentos fatais."
+    },
+    {
+        "scoring": "111",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 1."
+    },
+    {
+        "scoring": "112",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 2."
+    },
+    {
+        "scoring": "121",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 3."
+    },
+    {
+        "scoring": "122",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 4."
+    },
+    {
+        "scoring": "211",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 5."
+    },
+    {
+        "scoring": "212",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 6."
+    },
+    {
+        "scoring": "221",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 7."
+    },
+    {
+        "scoring": "222",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "ENDING 8."
+    },
+    {
+        "scoring": "999",
+        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "text": "Unescored."
+    }
+]
