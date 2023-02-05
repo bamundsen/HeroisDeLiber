@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, make_response, jsonify
+from flask import Flask, render_template, request, flash, redirect, make_response, url_for
 from Models.story import StoryFacade
 import json
 
@@ -30,20 +30,26 @@ def pick_hero():
             
     return resp
 
-@app.route('/choose', methods=['POST'])
+@app.route('/choose', methods=['GET','POST'])
 def choose():
     option = request.get_json()
     option = int(option['option'])
     player_data = request.cookies.get('player_data')
     player_data = json.loads(player_data)
-    print(type(player_data))
     story_facade = StoryFacade(player_data, option, False)
+    content_response = story_facade.pick_choice()
   
-    resp = make_response(story_facade.pick_choice())
-    hero = story_facade.get_hero_damage()
-    if hero.hp < 100:
-        print ("hero is dying")
-    resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
+    if story_facade.story.is_history_finished == False:
+        resp = make_response(content_response)
+        resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
+    
+    else:
+        print("RENDOU SQN")
+        resp = make_response({'end': "yes"})
+        resp.set_cookie('player_data', story_facade.display_player_data(), max_age=60*60*24*365*2)
+        # resp = redirect("html/ending.html")
+        # resp.delete_cookie('player_data')
+
     return resp
 
 @app.route('/loadcookies', methods=['GET'])
@@ -56,5 +62,18 @@ def loadcookies():
         story_facade = StoryFacade(player_data, -1, True)
         resp = make_response(story_facade.pick_choice())
         return resp
-    
+
+@app.route('/storyend', methods=['GET'])
+def story_end():
+    # return redirect(url_for("html/ending.html"))
+    try:
+        player_data = json.loads(request.cookies.get('player_data'))
+    except:
+        return redirect("/")
+    else:
+        print(player_data)
+        resp = make_response(render_template("html/ending.html"))
+        resp.delete_cookie('player_data')
+        return resp
+
 app.run(debug=True)
