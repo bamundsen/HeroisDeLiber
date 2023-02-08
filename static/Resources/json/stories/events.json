@@ -39,22 +39,22 @@
             {
                 "id":1,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore": "Fase 1"
+                "lore": "Ao entrar na caverna você encontra um caminho longo, estranhamente a caverna é repleta de pequenas pedras luminosas. Você caminha pela penumbra até se deparar com um desfiladeiro com um caminho estreito para ser percorrido, o que você faz?"
             }, 
             {
                 "id":2,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 2"
+                "lore":"Mais adiante, após algumas horas de caminhada, você encontra uma região mais úmida e escura, ao dobrar um corredor à distância enxerga um grande troll das cavernas, distraído devorando os restos de um animal, o que você faz?"
             },
             {
                 "id":3,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 3"
+                "lore":"O caminho fica cada vez mais escuro e se torna uma subida que se torna cada vez mais íngreme, quando você ouve um estrondo e percebe que há uma rocha esférica logo acima de você, em queda livre, que rolará na descida e o esmagará. O que você faz?"
             },
             {
                 "id":4,
                 "icon": "static/Resources/images/scenarios/act_2_2.png",
-                "lore":"Fase 4"
+                "lore":"Você chega ao fim da subida, e o caminho fica cada vez mais iluminado pelas gemas nas paredes da caverna, ficando cada vez mais largo até que você ouve barulhos de água. Após avançar um pouco mais você encontra uma grande galeria onde há dois caminhos a se seguir. No caminho da esquerda, você encontra uma placa com os dizeres: \"O caminho do gelo guiará aqueles que se orientam pela mente\", enquanto o caminho da direita diz \"O caminho do fogo guiará aqueles que se orientam pelo corpo\". Qual você escolhe?"
             }
         ]
     }

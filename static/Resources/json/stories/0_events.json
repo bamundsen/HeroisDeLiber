@@ -8,22 +8,22 @@
             {
                 "id":1,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore": "Após horas de viagem, você se vê na entrada da floresta, ao lado de um pequeno vilarejo. Você olha o mapa e ele não é muito objetivo, pois a floresta parece bastante densa. Um pouco acima da colina você avista um pequeno vilarejo, algumas pessoas estão curiosas com sua presença, mas pode não ser um bom sinal. O quê você faz?"
+                "lore": "Você caminha pelo corredor, que cada vez fica mais frio, até se deparar com a porta do templo. Completamente feita de um gelo aparentemente mágico, com inscrições rúnicas. Não há maçaneta e ela parece trancada. O que você faz?"
             }, 
             {
                 "id":2,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore":"Você caminhou floresta adentro por horas, até que se deparou com um rio de aproximadamente 15 metros de largura que passa por seu caminho, a densidade da floresta e o tempo são seus inimigos. A copa das árvores é alta e os galhos robustos, o som do riacho é quase ensurdecedor devida sua força."
+                "lore":"No interior do templo de gelo, tudo é realmente feito de gelo, o piso é liso e não permite movimentos rápidos e elaborados. Você caminha por corredores cobertos de gelo e iluminados magicamente por gemas brilhosas, até que se depara com esqueletos organizados como estátuas de decoração próximos às paredes, ornando armaduras e armas de gelo, as paredes possuem uma cor de gelo diferente da cor das armas pelo fato de as paredes conterem magia. Você já viu isso antes, sente que se passar por ali os esqueletos o atacarão. O que você faz?"
             },
             {
                 "id":3,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore":"Você segiu seu curso conforme planejado. Ao olhar o mapa você vê que deve passar por uma grande ravina na floresta, que você encontra sem grandes dificuldades, a ravina é extremamente escura, mas nesse ponto você teme chamar atenção pois os animais estão quietos. Em certo ponto estreito da ravina você avista uma barricada feita de entulhos e troncos, que parece estar aí há muito tempo pois está coberta pela vegetação. Este é o único caminho."
+                "lore":"Após horas caminhando pelo templo, você encontra um grande vestíbulo para o que parece ser o centro do templo. Neste vestíbulo há grandes lajotas de gelo, formando uma espécie de tabuleiro de xadres e diversos corpos congelados em pé, de costas para você e de frente para a porta. Aparentemente aventureiros que foram congelados tentando chegar à porta do templo central. O que você faz?"
             },
             {
                 "id":4,
                 "icon": "static/Resources/images/scenarios/act_1_2.png",
-                "lore":"Após uma descida na colina após a ravina, você vê uma clareira em um vale. O local é rochoso e poucas coisas nascem ali em contraste com o resto da floresta. Você avista 3 figuras, ao analisar cuidadosamente não restam dúvidas: há três zumbis ali, próximos à entrada da caverna, passar por ali chamará atenção deles."
+                "lore":"Você entra no dito templo, a temperatura está novamente estável, ele é repleto de vegetação e só possui um altar que contém uma coroa prateada pairando. Contudo, você ouve uma voz feminina falar com você através da coroa. \"Oh, herói que adentraste meu templo há muito esquecido, sei o que buscas e sei por que buscas. Saiba que tua jornada não deve ser concluída, o homem que te oferece riquezas trará ruina ao mundo, pois a coroa é capaz de realizar desejos e mudar o rumo do destino, ela não foi criada para satisfazer aos caprichos egoístas de um mortal. Se desistires de sua tarefa, dar-te-ei o poder necessário para enfrentar este homem tirano que deseja o controle sobre o mundo, lhe presentearei com o Anel do Gelo\". Qual é sua decisão?"
             }
         ]
     },
@@ -36,22 +36,22 @@
             {
                 "id":1,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore": "Fase 1"
+                "lore": "Você segue pelo corredor, que cada vez fica mais quente, você enxerga vapores emanando de pequenas frestas por todo lugar, até que você se depara com um rio de lava borbulhante, não há ponte, abaixo só há pequenas ilhas de rochas e acima apenas alguns estalactites. O que você faz?"
             }, 
             {
                 "id":2,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 2"
+                "lore":"Você caminha pelos corredores de fogo, os tijolos da parede parecem ter sido juntados com magma que jamais solidifica totalmente, o chão é quente, mas você segue até que de uma parede os tijolos quebram e um grande golem de magma surge diante de você, com aproximadamente quatro metros de altura. Se aproximar muito dele causa queimaduras graves à pele mesmo que não o toque. O que você faz?"
             },
             {
                 "id":3,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 3"
+                "lore":"Você chega a um salão grande e alto, com pilastras que vão do chão ao teto, no centro há uma grande porta que leva ao templo central. A porta aparentemente é pesada e necessita de movimentação de uma grande roda para abrir o portão. O que você faz?"
             },
             {
                 "id":4,
                 "icon": "static/Resources/images/scenarios/act_2_2.png",
-                "lore":"Fase 4"
+                "lore":"Você entra no dito templo, a temperatura está novamente estável, ele é repleto de vegetação e só possui um altar que contém uma coroa prateada pairando. Contudo, você ouve uma voz feminina falar com você através da coroa. \"Oh, herói que adentraste meu templo há muito esquecido, sei o que buscas e sei por que buscas. Saiba que tua jornada não deve ser concluída, o homem que te oferece riquezas trará ruina ao mundo, pois a coroa é capaz de realizar desejos e mudar o rumo do destino, ela não foi criada para satisfazer aos caprichos egoístas de um mortal. Se desistires de sua tarefa, dar-te-ei o poder necessário para enfrentar este homem tirano que deseja o controle sobre o mundo, lhe presentearei com o Anel do Fogo\". Qual é sua decisão?"
             }
         ]
     }

@@ -8,22 +8,22 @@
             {
                 "id":1,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore": "Após horas de viagem, você se vê na entrada da floresta, ao lado de um pequeno vilarejo. Você olha o mapa e ele não é muito objetivo, pois a floresta parece bastante densa. Um pouco acima da colina você avista um pequeno vilarejo, algumas pessoas estão curiosas com sua presença, mas pode não ser um bom sinal. O quê você faz?"
+                "lore": "Você está com a coroa em mãos, mas o caminho que existe para prosseguir é subir, pois você aparentemente está no fundo de um fosso de profundidade indefinida, apenas resta uma subida adiante para ser feita. O que você faz?"
             }, 
             {
                 "id":2,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore":"Você caminhou floresta adentro por horas, até que se deparou com um rio de aproximadamente 15 metros de largura que passa por seu caminho, a densidade da floresta e o tempo são seus inimigos. A copa das árvores é alta e os galhos robustos, o som do riacho é quase ensurdecedor devida sua força."
+                "lore":"Você encontra uma floresta congelada ao sair, aparentemente influência do templo e da coroa. A vida que havia ali dificilmente se adaptará às mudanças causadas por este frio, mais gelado que o pior dos invernos na região. No curso de volta você se depara com o grande rio, que nesse tempo parece ter alagado rapidamente apenas no seu tempo de viagem pelas cavernas, bem como ter se congelado permitindo passagem por cima. O que você faz?"
             },
             {
                 "id":3,
                 "icon": "static/Resources/images/scenarios/act_1_1.png",
-                "lore":"Você segiu seu curso conforme planejado. Ao olhar o mapa você vê que deve passar por uma grande ravina na floresta, que você encontra sem grandes dificuldades, a ravina é extremamente escura, mas nesse ponto você teme chamar atenção pois os animais estão quietos. Em certo ponto estreito da ravina você avista uma barricada feita de entulhos e troncos, que parece estar aí há muito tempo pois está coberta pela vegetação. Este é o único caminho."
+                "lore":"No seu caminho, você encontra poucas pessoas, pois o frio arrebatador espantou até os animais. O caminho é silencioso e desolado passando pela vila que emanava vida, mas agora é um campo sem plantações e com casas fechadas, mas você chega finalmente ao seu destino, sendo recebido pelos guardas do palácio e encontrando com o Rei. Ele o recebe calorosamente, com honrarias e um banquete. Você festeja até que chega o momento. Ele pergunta pela coroa e diz que pelo contrato, você deve a entregar a ele. O que você faz?"
             },
             {
                 "id":4,
                 "icon": "static/Resources/images/scenarios/act_1_2.png",
-                "lore":"Após uma descida na colina após a ravina, você vê uma clareira em um vale. O local é rochoso e poucas coisas nascem ali em contraste com o resto da floresta. Você avista 3 figuras, ao analisar cuidadosamente não restam dúvidas: há três zumbis ali, próximos à entrada da caverna, passar por ali chamará atenção deles."
+                "lore":"Você se vê desolado e frustrado com o que ocorreu. Muitas pessoas morreram, você provavelmente será um foragido e não há muito o que fazer ali. Você sai e se depara com a visão do topo da colina: montes de gelo e neve por toda parte, onde aos seus olhos a vida muito em breve estará extinta. Você está sozinho e com uma coroa, o que você faz?"
             }
         ]
     },
@@ -36,22 +36,22 @@
             {
                 "id":1,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore": "Fase 1"
+                "lore": "Ao chegar no bosque, você encontra o ar fresco novamente, os pássaros cantam e a vida floresce. Você se sente aliviado, mas há contas que você deve prestar, pois trair o contrato é trair o reino. Você caminha em direção a trilha, mas logo é pego por uma armadilha que o prende em uma rede suspensa em uma árvore. O que você faz?"
             }, 
             {
                 "id":2,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 2"
+                "lore":"Você segue pelo caminho, até que em uma parte mais escura você é emboscado por um grupo encapuzado, falando \"entregue-nos a coroa\". O que você faz?"
             },
             {
                 "id":3,
                 "icon": "static/Resources/images/scenarios/act_2_1.png",
-                "lore":"Fase 3"
+                "lore":"Fica muito claro que não será facil se livrar dessa promessa, pois há pessoas atrás de você. Você segue seu caminho pela floresta, mas é perseguido por um ogro caçador. Esta criatura se guia pelo cheiro e persegue o alvo até o matar. O que você faz?"
             },
             {
                 "id":4,
                 "icon": "static/Resources/images/scenarios/act_2_2.png",
-                "lore":"Fase 4"
+                "lore":"Agora, resta decidir como você vai lidar com a situação. Por um lado você sabe que viverá fugindo caso não enfrente a corte. Você pode decidir continuar fugindo, ou por um fim aos planos do Rei, que não desistirá tão cedo de você tampouco da coroa. O que você faz?"
             }
         ]
     }
