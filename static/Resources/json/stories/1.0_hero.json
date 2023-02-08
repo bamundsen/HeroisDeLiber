@@ -7,31 +7,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Ir ao vilaaaaaarejo pedir informação para a população.",
-                        "score": 5,
+                        "text": "Tentar ler as inscrições mágicas.",
+                        "score": -15,
                         "damage": 0,
-                        "consequence": "A população do vilarejo admira um guerreiro, pois é um sinal de proteção e eles colaboram com você dando uma orientação precisa sobre o loca, entretanto avisam se tratar de um lugar perigoso e amaldiçoado."
+                        "consequence": "Você passa muito tempo, horas, tentando decifrar as runas, sem sucesso algum, nada parece fazer sentido, você acaba desistindo e recorrendo à força para abrir."
                     },
                     {
                         "id": 2,
-                        "text": "Seguir para explorar a floresta.",
-                        "score": 0,
+                        "text": "Tentar arrombar o mecanismo de tranca.",
+                        "score": -10,
                         "damage": 0,
-                        "consequence": "Você caminha pela floresta, que de fato é um labirinto vivo. Você vaga a esmo por horas até encontrar o próximo ponto do mapa e seguir sua missão."
+                        "consequence": "Você passa horas tentando destravar o mecanismo, até que finalmente desiste e usa a força para abrir."
                     },
                     {
                         "id": 3,
-                        "text": "Avaliar mais cuidadosamente o mapa.",
-                        "score": -5,
+                        "text": "Usar a força para derrubar a porta.",
+                        "score": 5,
                         "damage": 0,
-                        "consequence": "Você avalia o mapa cuidadosamente, mas esse não é realmente seu forte. Você se perde algumas vezes, mas eventualmente chega ao ponto do mapa."
+                        "consequence": "Você força a porta por um bom tempo, ela é muito resistente e fria, mas eventualmente cede e abre."
                     },
                     {
                         "id": 4,
-                        "text": "Escalar as árvores para ter um bom ponto de visão.",
-                        "score": -10,
+                        "text": "Meditar para tentar encontrar uma maneira de entrar.",
+                        "score": -5,
                         "damage": 0,
-                        "consequence": "Com muita dificuldade você sobe em uma árvore em um ponto alto da floresta, sua armadura é pesada e vesti-la demora bastante. Você segue nesse fluxo que não é muito preciso, nem muito eficiente até o próximo ponto do mapa."
+                        "consequence": "Você medita para tentar encontrar uma solução, mas nada vem em mente e você recorre à força para abrir."
                     }
                 ]
             },
@@ -40,31 +40,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Enfrentar a força do rio através do nado com seu Vigor.",
-                        "score": -10,
-                        "damage": 20,
-                        "consequence": "Você entra no rio, que é mais fundo do que parece, você aguenta bastante com seu Vigor, entretanto a correnteza forte o atrapalha impedindo que a passagem seja tranquila. Após quase se afogar você atravessa."
+                        "text": "Engajar o combate usando a Lança de Duas Mãos.",
+                        "score": 5,
+                        "damage": 5,
+                        "consequence": "Embora esqueletos sejam resistentes a lâminas, você luta bravamente, dominando o combate com sua lança e saindo com algumas escoriaçoes apenas."
                     },
                     {
                         "id": 2,
-                        "text": "Tomar um grande impulso com sua Investida e saltar para o outro lado.",
+                        "text": "Engajar o combate usando a Espada e Escudo",
                         "score": -5,
                         "damage": 10,
-                        "consequence": "Você toma impulso para saltar, mas o peso da sua armadura não ajuda em tal tarefa, você passa no máximo oito metros e é obrigado a seguir o restante do caminho pela água, após dificuldades você atravessa."
+                        "consequence": "Embora esqueletos sejam resistentes a lâminas, você leva o combate em um ritmo bom, sendo golpeado em alguns momentos, mas saindo vivo."
                     },
                     {
                         "id": 3,
-                        "text": "Cortar madeira para tentar criar uma ponte para atravessar para o outro lado.",
-                        "score": 5,
-                        "damage": 0,
-                        "consequence": "Você corta diversos troncos e carrega facilmente graças a sua Potência, construindo uma pequena ponte que serve de apoio para a travessia, árdua, mas eficiente."
+                        "text": "Usar investida para passar rapidamente pelos inimigos.",
+                        "score": -10,
+                        "damage": 20,
+                        "consequence": "O piso de gelo é liso, você perde o equilíbrio e acaba caindo, enquanto os inimigos lhe atacam impiedosamente até que você possa se levantar e contra-atacar."
                     },
                     {
                         "id": 4,
-                        "text": "Escalar pelos galhos das árvores para chegar ao outro lado.",
+                        "text": "Passar furtivamente sem tentar chamar atenção.",
                         "score": -5,
-                        "damage": 10,
-                        "consequence": "Com muita dificuldade você passa pelo galhos, mas o peso de sua armadura é seu inimigo e você cai na água, tendo que fazer metade do percurso com muita dificuldade na forte correnteza."
+                        "damage": 20,
+                        "consequence": "Furtividade não é seu forte, os inimigos percebem sua passagem e o atacam primeiro."
                     }
                 ]
             },
@@ -73,31 +73,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Retirar os troncos pesados da barricada com ajuda de sua Lança de Duas Mãos.",
-                        "score": 0,
-                        "consequence": "Após algum tempo e com esforço, você retira os troncos de seu caminho.",
-                        "damage": 0
-                    },
-                    {
-                        "id": 2,
-                        "text": "Escalar a barricada para chegar ao outro lado.",
-                        "score": -5,
-                        "consequence": "Você tenta escalar a barricada, mas um tronco podre quebra e você cai, causando alguns ferimentos leves.",
-                        "damage": 10
-                    },
-                    {
-                        "id": 3,
-                        "text": "Incendiar a barricada com sua tocha.",
-                        "score": -30,
-                        "consequence": "Você incendeia a barricada, processo inicialente demorado, mas o fogo acaba se epalhando em algumas partes da ravina, além de se queimar você perde tempo tentando conter o incêndio.",
+                        "text": "Analisar o padrão das lajotas e pessoas congeladas para encontar um caminho seguro.",
+                        "score": -10,
+                        "consequence": "Você realmente não entende como o mecanismo funciona, assim precisando correr para o outro lado. Você é atingido por raios de gelo que causam uma dor intensa, mas sua armadura o protege de parte do dano evitando que congele totalmente.",
                         "damage": 20
                     },
                     {
+                        "id": 2,
+                        "text": "Tentar saltar sobre as estátuas para chegar ao outro lado.",
+                        "score": -10,
+                        "consequence": "Você não é leve, nem muito habilidoso para saltar com sua armadura, e precisa correr. Você é atingido por raios de gelo que causam uma dor intensa, mas sua armadura o protege de parte do dano evitando que congele totalmente..",
+                        "damage": 20
+                    },
+                    {
+                        "id": 3,
+                        "text": "Fechar os olhos e deixar com que as forças maiores o guiem.",
+                        "score": -10,
+                        "consequence": "Você fecha os olhos e segue, nõ demora muito para sentir um ataque de gelo e precisar correr. Você é atingido por raios de gelo que causam uma dor intensa, mas sua armadura o protege de parte do dano evitando que congele totalmente..",
+                        "damage": 30
+                    },
+                    {
                         "id": 4,
-                        "text": "Usar sua Investida para derrubar a barricada.",
-                        "score": 10,
-                        "consequence": "Sua investida é poderosa o suficiente aliada à sua Potência, você destroça a barricada e libera o caminho.",
-                        "damage": 0
+                        "text": "Dar uma Investida e deslizar pelo gelo.",
+                        "score": 0,
+                        "consequence": "Você toma impulso, corre e atravessa o campo deslizando com ajuda de seus metais, sendo atingido de raspão pelos raios de gelo.",
+                        "damage": 10
                     }
                 ]
             },
@@ -106,31 +106,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Atacar com sua Lança de Duas Mãos.",
-                        "score": 10,
+                        "text": "Tomar a Coroa.",
+                        "score": -10,
                         "damage": 0,
-                        "consequence": "Você avança, quando seus inimigos o percebem você já decapitou o primeiro, agilmente atacou o segundo enquanto se afastou do terceiro, golpeando o último no instante em que ele o alcançou. Liberando seu caminho para a caverna."
+                        "consequence": "Você ignora o aviso e toma a coroa para si, a porta do templo é selada e so há como sair escalando para a abertura que há metros acima."
                     },
                     {
                         "id": 2,
-                        "text": "Atacar com sua Espada Curta e Escudo.",
-                        "score": 0,
-                        "damage": 30,
-                        "consequence": "Você empunha seu escudo, os inimigos avançam e quando está em seu alcance você golpeia fatalmente o primeiro, mas os inimigos já estão em seu encalço e você acaba sendo mordido por um deles, mas corta sua cabeça e defende o ataque do último com o escudo, para o contra-atacar fatalmente. Liberando seu caminho para a caverna."
+                        "text": "Aceitar o Anel de Gelo.",
+                        "score": 15,
+                        "damage": -70,
+                        "consequence": "Você aceita o anel, a voz feminina agradece e do centro da coroa um anel azul e belo, com uma gema fria em seu topo. O anel vem até seu dedo e você sente uma enrgia poderosa. Seu sangue fica frio, suas feridas são curadas, seus equipamentos e energias são envoltos de uma energiaa fria. Você é levitado até o topo do local onde há uma saída da caverna."
                     },
                     {
                         "id": 3,
-                        "text": "Realizar uma Investida para dentro atropelando quem estiver em seu caminho.",
+                        "text": "",
                         "score": 0,
-                        "damage": 20,
-                        "consequence": "Você avança velozmente atropelando um inimigo que bloqueava seu caminho, mas dando tempo para que outro o arranhasse durante a investida, liberando seu caminho para a caverna."
+                        "damage": 0,
+                        "consequence": ""
                     },
                     {
                         "id": 4,
-                        "text": "Passar furtivamente por trás do grupo.",
-                        "score": -10,
-                        "damage": 40,
-                        "consequence": "Você se esconde e se esgueira, mas sua armadura o acusa por conta do barulho, os inimigos já estão próximos demais para você se preparar melhor e entra em combate despreparado, após uma luta árdua você tem acesso à caverna."
+                        "text": "",
+                        "score": 0,
+                        "damage": 0,
+                        "consequence": ""
                     }
                 ]
             }
@@ -144,27 +144,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "FINALMENTE",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Usar sua força para derrubar estalactites e estalagmites para fazer um caminho sobre a lava.",
+                        "score": 10,
+                        "consequence": "Você derruba facilmente muitas rochas fazendo um caminho no qual se pode caminhar com segurança e atravessa.",
+                        "damage": 0
                     },
                     {
                         "id": 2,
-                        "text": "TRASICAO",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Saltar sobre as estalagmites, se apoiando nas estalagmites quando possível.",
+                        "score": -5,
+                        "consequence": "Seu grande peso e sua armadura não auxiliam, você acaba caindo na lava e se machucando seriamente.",
+                        "damage": 20
                     },
                     {
                         "id": 3,
-                        "text": "DE ATO",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "Usar sua Invstida para dar um salto até a maior ilha a 3m e saltar novamente para o outro lado.",
+                        "score": 0,
+                        "consequence": "Você core e salta para a ilha, se queimando um pouco no processo, e em seguida salta para o outro lado.",
+                        "damage": 10
                     },
                     {
                         "id": 4,
-                        "text": "FUNCIONANDO",
+                        "text": "Usar seu vigor para suportar o calor da lava enquanto caminha dentro ela.",
                         "score": -10,
-                        "consequence": ""
+                        "consequence": "O calor da lava machuca você e danifica seus equipamentos seriamente.",
+                        "damage": 40
                     }
                 ]
             },
@@ -173,27 +177,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "2",
+                        "text": "Mantém distância lutando com a Lança de Duas Mãos.",
                         "score": 5,
-                        "consequence": ""
+                        "consequence": "Mesmo sendo um único alvo, lutar a certa distância mitigou os danos que você sofreria. Você destrói a criatura.",
+                        "damage": 5
                     },
                     {
                         "id": 2,
-                        "text": "2",
+                        "text": "Lutar com Espada e Escudo.",
                         "score": 0,
-                        "consequence": ""
+                        "consequence": "Mesmo seu escudo não é totalmente capaz de bloquear as pancadas envebidas em lava da criatura, que você derrota com muito esforço.",
+                        "damage": 10
                     },
                     {
                         "id": 3,
-                        "text": "2",
+                        "text": "Tentar fugir e o despistar.",
                         "score": -5,
-                        "consequence": ""
+                        "consequence": "Fugir não é seu forte, a criatura arremessa algumas rochas em chamas até que você consiga a despistar.",
+                        "damage": 15
                     },
                     {
                         "id": 4,
-                        "text": "2",
-                        "score": -10,
-                        "consequence": ""
+                        "text": "Entrar no buraco de onde ele saiu e correr.",
+                        "score": -5,
+                        "consequence": "A criatura fica surpresa, mas ainda o ataca arremessando bolas em chamas enquanto você foge.",
+                        "damage": 15
                     }
                 ]
             },
@@ -202,27 +210,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "3",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Estuda o mecanismo para bolar um jeito de o abrir.",
+                        "score": -5,
+                        "consequence": "Nada ali faz sentido para você, você perde tempo até ir abrir girando a roda.",
+                        "damage": 0
                     },
                     {
                         "id": 2,
-                        "text": "3",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Usa sua força para girar com suas próprias mãos.",
+                        "score": 10,
+                        "consequence": "Graças a sua Potência você abre a porta sem grandes dificuldades.",
+                        "damage": 0
                     },
                     {
                         "id": 3,
-                        "text": "3",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "Usa sua força para tentar abrir a porta.",
+                        "score": 0,
+                        "consequence": "Você faz muito esforço por minutos até que a porta acaba abrindo.",
+                        "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "3",
+                        "text": "Estuda a tranca para procurar por falhas.",
                         "score": -10,
-                        "consequence": ""
+                        "consequence": "Nada ali faz sentido para você, você perde tempo até ir abrir girando a roda.",
+                        "damage": 0
                     }
                 ]
             },
@@ -231,27 +243,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "4",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Tomar a Coroa.",
+                        "score": -10,
+                        "damage": 0,
+                        "consequence": "Você ignora o aviso e toma a coroa para si, a porta do templo é selada e so há como sair escalando para a abertura que há metros acima."
                     },
                     {
                         "id": 2,
-                        "text": "4",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Aceitar o Anel de Fogo.",
+                        "score": 15,
+                        "damage": -70,
+                        "consequence": "Você aceita o anel, a voz feminina agradece e do centro da coroa um anel dourado e belo, com uma gema quente em seu topo. O anel vem até seu dedo e você sente uma enrgia poderosa. Seu sangue fica ferve, suas feridas são curadas, seus equipamentos e energias são envoltos de uma aura quente. Você é levitado até o topo do local onde há uma saída da caverna."
                     },
                     {
                         "id": 3,
-                        "text": "4",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "",
+                        "score": 0,
+                        "consequence": "",
+                        "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "4",
-                        "score": -10,
-                        "consequence": ""
+                        "text": "",
+                        "score": 0,
+                        "consequence": "",
+                        "damage": 0
                     }
                 ]
             }

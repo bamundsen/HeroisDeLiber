@@ -147,31 +147,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "FINALMENTE",
-                        "score": 5,
-                        "damage": 0,
-                        "consequence": ""
+                        "text": "Usar sua Investida para pegar impulso e saltar sobre o desfiladeiro de aproximadament 6 metros.",
+                        "score": -5,
+                        "damage": 10,
+                        "consequence": "Você salta, mas não consegue atravessar o desfiladeiro por completo, se agarrando a umas rochas e se machucando no processo."
                     },
                     {
                         "id": 2,
-                        "text": "TRASICAO",
-                        "score": 0,
+                        "text": "Caminhar pela passarela estreita próxima à parede utilizando sua Lança de duas mãos como sustentação.",
+                        "score": 5,
                         "damage": 0,
-                        "consequence": ""
+                        "consequence": "Você caminha utilizando sua lança como apoio, por ter uma longa haste ela serve de forma ideal."
                     },
                     {
                         "id": 3,
-                        "text": "DE ATO",
+                        "text": "Descer até o fundo do precipício e escalar novamente ao final.",
                         "score": -5,
-                        "damage": 10,
-                        "consequence": ""
+                        "damage": 5,
+                        "consequence": "Você demora um longo tempo, pois o desfiladeiro possui algumas dezenas de metros de altura e a subida é árdua."
                     },
                     {
                         "id": 4,
-                        "text": "FUNCIONANDO",
-                        "score": -10,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Caminhar pela passarela estreita próxima à parede utilizando sua Lança de duas mãos como sustentação.",
+                        "score": -5,
+                        "damage": 10,
+                        "consequence": "Você se equilibra como pode, acaba caindo e tendo que se segurar em algumas rochas, dificultando o caminho pois a espada é curta demais para esta tarefa."
                     }
                 ]
             },
@@ -180,31 +180,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "2",
-                        "score": 5,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Desviar o caminho e tentar encontrar outra rota diferente do mapa.",
+                        "score": -10,
+                        "damage": 0,
+                        "consequence": "As cavernas são confusas, seguir por zonas não mapeadas se mostra complicado demais e você perde horas e recursos."
                     },
                     {
                         "id": 2,
-                        "text": "2",
-                        "score": 0,
+                        "text": "Iniciar o combate utilizando a Lança de Duas Mãos.",
+                        "score": -5,
                         "damage": 20,
-                        "consequence": ""
+                        "consequence": "Você entra em combate com a criatura, que é forte e resistente revidando aos seus ataques, sua lança não lhe garante grande vantagem para bloquear ataques das grandes mãos da criatura e você sai ferido apos a derrotar."
                     },
                     {
                         "id": 3,
-                        "text": "2",
-                        "score": -5,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Iniciar o combate utilizando a Espada e Escudo.",
+                        "score": 5,
+                        "damage": 5,
+                        "consequence": "Você luta bravamente contra a criatura, bloqueando seus golpes e contra-atacando até que por fim ela cai e você sai riufante com alguns arranhões."
                     },
                     {
                         "id": 4,
-                        "text": "2",
+                        "text": "Passar furtivamente por tras da criatura.",
                         "score": -10,
-                        "damage": 20,
-                        "consequence": ""
+                        "damage": 30,
+                        "consequence": "Furtividade não é seu ponto forte, a criatura o percebe e ataca primeiro, você saca suas armas e a combate, já ferido e abalado."
                     }
                 ]
             },
@@ -213,31 +213,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "3",
-                        "score": 5,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Usar seu Vigor para resistir em frente a pedra e a parar.",
+                        "score": -5,
+                        "damage": 10,
+                        "consequence": "Você para a pedra a um alto custo, pois seu peso é mais do que você poderia aguentar, tendo contusões."
                     },
                     {
                         "id": 2,
-                        "text": "3",
-                        "score": 0,
+                        "text": "Tentar se esgueirar pelo canto da parede e evitar que a pedra o esmague.",
+                        "score": -10,
                         "damage": 20,
-                        "consequence": ""
+                        "consequence": "Agilidade em sua armdura não é seu forte, você tenta se esgueirar, mas a pedra esmaga seus membros causando grande dor."
                     },
                     {
                         "id": 3,
-                        "text": "3",
+                        "text": "Contra-atacar a pedra com seu escudo para a destruir.",
                         "score": -5,
-                        "damage": 20,
-                        "consequence": ""
+                        "damage": 15,
+                        "consequence": "Você contra-ataca, mas com pouco efeito, a pedra apenas racha e o empurra alguns metros até ser destruída."
                     },
                     {
                         "id": 4,
-                        "text": "3",
-                        "score": -10,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Usar sua Investida para descer rapidamente para uma zona segura.",
+                        "score": 10,
+                        "damage": 0,
+                        "consequence": "Você rapidamente corre para uma zona segura, a pedra chega ao fim do corredor e se estilhaça permitino sua passagem."
                     }
                 ]
             },
@@ -246,30 +246,30 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "4",
-                        "score": 5,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Esquerda, O caminho do Gelo.",
+                        "score": -5,
+                        "damage": 0,
+                        "consequence": "Você segue o caminho, conforme o clima esfria e você vê fractais de gelo se formando."
                     },
                     {
                         "id": 2,
-                        "text": "4",
-                        "score": 0,
-                        "damage": 20,
-                        "consequence": ""
+                        "text": "Direita, o caminho do fogo.",
+                        "score": 10,
+                        "damage": 0,
+                        "consequence": "Você segue o caminho, conforme o clima esquenta e você vê vapores vulcânicos emergindo de frestas."
                     },
                     {
                         "id": 3,
                         "text": "",
-                        "score": -5,
-                        "damage": 20,
+                        "score": 0,
+                        "damage": 0,
                         "consequence": ""
                     },
                     {
                         "id": 4,
                         "text": "",
-                        "score": -10,
-                        "damage": 20,
+                        "score": 0,
+                        "damage": 0,
                         "consequence": ""
                     }
                 ]
