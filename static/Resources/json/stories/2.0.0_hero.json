@@ -7,31 +7,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "BRENCH 0 CHECK",
-                        "score": 5,
-                        "damage": 0,
-                        "consequence": "A população do vilarejo admira um guerreiro, pois é um sinal de proteção e eles colaboram com você dando uma orientação precisa sobre o loca, entretanto avisam se tratar de um lugar perigoso e amaldiçoado."
+                        "text": "Escalar as paredes pelas rochas proeminentes.",
+                        "score": -5,
+                        "damage": 10,
+                        "consequence": "Escalar sem as ferramentas adequadas é extremamente difícil para você, que cai algumas vezes até finalmente ter sucesso."
                     },
                     {
                         "id": 2,
-                        "text": "Seguir para explorar a floresta.",
-                        "score": 0,
+                        "text": "Prender a corda em algo utilizando a Magia: Telecinese.",
+                        "score": 5,
                         "damage": 0,
-                        "consequence": "Você caminha pela floresta, que de fato é um labirinto vivo. Você vaga a esmo por horas até encontrar o próximo ponto do mapa e seguir sua missão."
+                        "consequence": "Você facilmente consegue criar seu caminho de subida, escalando de forma segura."
                     },
                     {
                         "id": 3,
-                        "text": "Avaliar mais cuidadosamente o mapa.",
-                        "score": -5,
+                        "text": "",
+                        "score": 0,
                         "damage": 0,
-                        "consequence": "Você avalia o mapa cuidadosamente, mas esse não é realmente seu forte. Você se perde algumas vezes, mas eventualmente chega ao ponto do mapa."
+                        "consequence": ""
                     },
                     {
                         "id": 4,
-                        "text": "Escalar as árvores para ter um bom ponto de visão.",
-                        "score": -10,
+                        "text": "",
+                        "score": 0,
                         "damage": 0,
-                        "consequence": "Com muita dificuldade você sobe em uma árvore em um ponto alto da floresta, sua armadura é pesada e vesti-la demora bastante. Você segue nesse fluxo que não é muito preciso, nem muito eficiente até o próximo ponto do mapa."
+                        "consequence": ""
                     }
                 ]
             },
@@ -40,31 +40,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Enfrentar a força do rio através do nado com seu Vigor.",
-                        "score": -10,
-                        "damage": 20,
-                        "consequence": "Você entra no rio, que é mais fundo do que parece, você aguenta bastante com seu Vigor, entretanto a correnteza forte o atrapalha impedindo que a passagem seja tranquila. Após quase se afogar você atravessa."
+                        "text": "Escalar os galhos das árvores para evitar o gelo.",
+                        "score": -5,
+                        "damage": 5,
+                        "consequence": "Neste ponto da aventura, você se toca que escalar não é seu forte, você cai no caminho e prossegue caminhando."
                     },
                     {
                         "id": 2,
-                        "text": "Tomar um grande impulso com sua Investida e saltar para o outro lado.",
+                        "text": "Caminhar normalmente pelo gelo.",
                         "score": -5,
-                        "damage": 10,
-                        "consequence": "Você toma impulso para saltar, mas o peso da sua armadura não ajuda em tal tarefa, você passa no máximo oito metros e é obrigado a seguir o restante do caminho pela água, após dificuldades você atravessa."
+                        "damage": 0,
+                        "consequence": "Você caminha e tomba algumas vezes por falta de equipamento específico."
                     },
                     {
                         "id": 3,
-                        "text": "Cortar madeira para tentar criar uma ponte para atravessar para o outro lado.",
+                        "text": "Usar sua Magia: Telecinese para prender uma corda e se segurar.",
                         "score": 5,
                         "damage": 0,
-                        "consequence": "Você corta diversos troncos e carrega facilmente graças a sua Potência, construindo uma pequena ponte que serve de apoio para a travessia, árdua, mas eficiente."
+                        "consequence": "Consegue um apoio fixo na corda, perde alguns minutos, mas nada que o atrase."
                     },
                     {
                         "id": 4,
-                        "text": "Escalar pelos galhos das árvores para chegar ao outro lado.",
+                        "text": "Usar a Magia: Bola de Fogo no rio.",
                         "score": -5,
-                        "damage": 10,
-                        "consequence": "Com muita dificuldade você passa pelo galhos, mas o peso de sua armadura é seu inimigo e você cai na água, tendo que fazer metade do percurso com muita dificuldade na forte correnteza."
+                        "damage": 5,
+                        "consequence": "Você explode parte do rio, criando uma cratera de gelo e atirando estilhaços para todos os lados o ferindo, não tornou o caminho mais fácil."
                     }
                 ]
             },
@@ -73,31 +73,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Retirar os troncos pesados da barricada com ajuda de sua Lança de Duas Mãos.",
-                        "score": 0,
-                        "consequence": "Após algum tempo e com esforço, você retira os troncos de seu caminho.",
-                        "damage": 0
+                        "text": "Entregar a coroa.",
+                        "score": -10,
+                        "consequence": "Você entrega a coroa. O rei fica muito satisfeito enquanto sorri e diz que em breve você receberá a maior honraria já vista. Ele coloca a coroa sobre sua cabeça e ri, mas seu riso é abafado por uma cara de espanto. Seus olhos reviram e ele começa a gritar de agonia, enquanto seu corpo incha e racha. Os gritos de agonia se tornam grunhidos vindo dos mais terríveis pesadelos, ele começa a se transformar em uma criatura monstruosa de gelo e ataca todos ali. Os soldados e você lutam contra ele enquanto emite os sons agonizantes, até que apenas você sobrevive para finalizar o ocorrido e destruir a criatura, que cai morta, com a coroa saindo de sua cabeça e o corpo do Rei morto por marca de suas armas caindo em sua frente.",
+                        "damage": 30
                     },
                     {
                         "id": 2,
-                        "text": "Escalar a barricada para chegar ao outro lado.",
-                        "score": -5,
-                        "consequence": "Você tenta escalar a barricada, mas um tronco podre quebra e você cai, causando alguns ferimentos leves.",
-                        "damage": 10
-                    },
-                    {
-                        "id": 3,
-                        "text": "Incendiar a barricada com sua tocha.",
-                        "score": -30,
-                        "consequence": "Você incendeia a barricada, processo inicialente demorado, mas o fogo acaba se epalhando em algumas partes da ravina, além de se queimar você perde tempo tentando conter o incêndio.",
+                        "text": "Atacar o guarda mais próximo e se recusar a entregar.",
+                        "score": 0,
+                        "consequence": "Você ataca o guarda mais próximo e começa um combate, um por um você os derruba, até que o próprio Rei também cai por suas mãos, em um trágico e inevitável fim.",
                         "damage": 20
                     },
                     {
+                        "id": 3,
+                        "text": "Colocar a coroa você mesmo sobre o Rei.",
+                        "score": -15,
+                        "consequence": "Você diz que você mesmo deve ter as honras, o Rei sorri e diz que você receberá a maior honraria já vista enquanto você posiciona a coroa sobre sua cabeça e ele ri, mas seu riso é abafado por uma cara de espanto. Seus olhos reviram e ele começa a gritar de agonia, enquanto seu corpo incha e racha. Os gritos de agonia se tornam grunhidos vindo dos mais terríveis pesadelos, ele começa a se transformar em uma criatura monstruosa de gelo e ataca todos ali. Os soldados e você lutam contra ele enquanto emite os sons agonizantes, até que apenas você sobrevive para finalizar o ocorrido e destruir a criatura, que cai morta, com a coroa saindo de sua cabeça e o corpo do Rei morto por marca de suas armas caindo em sua frente.",
+                        "damage": 35
+                    },
+                    {
                         "id": 4,
-                        "text": "Usar sua Investida para derrubar a barricada.",
-                        "score": 10,
-                        "consequence": "Sua investida é poderosa o suficiente aliada à sua Potência, você destroça a barricada e libera o caminho.",
-                        "damage": 0
+                        "text": "Mentir que não encontrou a coroa.",
+                        "score": -10,
+                        "consequence": "Toda a música para, a alegria do local some enquanto o Rei fica sério e diz não acreditar em você, pela sua ousadia ele comanda os soldados que eliminem você e procurem pela coroa. Começa um combate, um por um você os derruba, até que o próprio Rei também cai por suas mãos, em um trágico e inevitável fim.",
+                        "damage": 20
                     }
                 ]
             },
@@ -106,31 +106,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "Atacar com sua Lança de Duas Mãos.",
-                        "score": 10,
-                        "damage": 0,
-                        "consequence": "Você avança, quando seus inimigos o percebem você já decapitou o primeiro, agilmente atacou o segundo enquanto se afastou do terceiro, golpeando o último no instante em que ele o alcançou. Liberando seu caminho para a caverna."
+                        "text": "Fazer a jornada de volta à caverna e devolver a coroa.",
+                        "score": 15,
+                        "consequence": "Você faz a longa jornada novamente, o frio afujentou muitas criaturas, mas o caminho ainda era perigoso, mas você devolve a coroa ao seu devido lugar, ela o agradece dizendo que você fez a coisa certa.",
+                        "damage": 20
                     },
                     {
                         "id": 2,
-                        "text": "Atacar com sua Espada Curta e Escudo.",
+                        "text": "Tomar a coroa para si, colocando-a sobre a cabeça.",
                         "score": 0,
-                        "damage": 30,
-                        "consequence": "Você empunha seu escudo, os inimigos avançam e quando está em seu alcance você golpeia fatalmente o primeiro, mas os inimigos já estão em seu encalço e você acaba sendo mordido por um deles, mas corta sua cabeça e defende o ataque do último com o escudo, para o contra-atacar fatalmente. Liberando seu caminho para a caverna."
+                        "consequence": "Você se torna vítima da maldição da coroa, perdendo seus sentidos.",
+                        "damage": 0
                     },
                     {
                         "id": 3,
-                        "text": "Realizar uma Investida para dentro atropelando quem estiver em seu caminho.",
+                        "text": "",
                         "score": 0,
-                        "damage": 20,
-                        "consequence": "Você avança velozmente atropelando um inimigo que bloqueava seu caminho, mas dando tempo para que outro o arranhasse durante a investida, liberando seu caminho para a caverna."
+                        "consequence": "",
+                        "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "Passar furtivamente por trás do grupo.",
-                        "score": -10,
-                        "damage": 40,
-                        "consequence": "Você se esconde e se esgueira, mas sua armadura o acusa por conta do barulho, os inimigos já estão próximos demais para você se preparar melhor e entra em combate despreparado, após uma luta árdua você tem acesso à caverna."
+                        "text": "",
+                        "score": 0,
+                        "consequence": "",
+                        "damage": 0
                     }
                 ]
             }
@@ -144,27 +144,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "FINALMENTE",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Debater-se para quebrar o galho que prende a armadilha.",
+                        "score": -5,
+                        "consequence": "Você se debate na rede até que o galho prega e o derruba no chão.",
+			            "damage": 5
                     },
                     {
                         "id": 2,
-                        "text": "TRASICAO",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Usar sua Magia: Mísseis Mágicos para derrubar o sustento da rede.",
+                        "score": 5,
+                        "consequence": "Com um disparo preciso, sua magia é embuída pelo gelo, que faz um corte preciso onde você mirou, o libertando.",
+			            "damage": 5
                     },
                     {
                         "id": 3,
-                        "text": "DE ATO",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "Usar sua Magia: Telecinese para soltar a rede.",
+                        "score": 5,
+                        "consequence": "Você cuidadosamente desfaz o nó, o libertando em segurança.",
+			            "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "FUNCIONANDO",
+                        "text": "Usar sua Magia: Bola de Fogo para destruir a rede.",
                         "score": -10,
-                        "consequence": ""
+                        "consequence": "Sua bola de fogo é envolta por uma energia fria e você descobre que agora a explosão é fria, mas é atingido severamente por ela antes de se soltar.",
+			            "damage": 10
                     }
                 ]
             },
@@ -173,27 +177,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "2",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Dizer que não possui a coroa.",
+                        "score": 0,
+                        "consequence": "Eles não acreditam e começa um combate, você dispara sua Bola de Fogo frio que instantaneamente congela a todos.",
+			            "damage": 5
                     },
                     {
                         "id": 2,
-                        "text": "2",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Atacar com sua Magia: Bola de Fogo.",
+                        "score": 5,
+                        "consequence": "Você dispara sua Bola de Fogo frio que instantaneamente congela a todos ali, você está seguro.",
+			            "damage": 0
                     },
                     {
                         "id": 3,
-                        "text": "2",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "Usar sua Magia: Sono.",
+                        "score": 5,
+                        "consequence": "Eles caem em um sono profundo, você está seguro.",
+			            "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "2",
-                        "score": -10,
-                        "consequence": ""
+                        "text": "Dizer que não sabe do que estão falando.",
+                        "score": 0,
+                        "consequence": "Eles não compram sua ideia e o atacam imediatamente, você luta com seus mísseis mágicos que os congelam aos poucos até que você os tenha derrotado.",
+			            "damage": 5
                     }
                 ]
             },
@@ -202,27 +210,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "3",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Atacar o Ogro com sua Magia: Bola de Fogo.",
+                        "score": 0,
+                        "consequence": "O ogro é resistente mesmo ao frio intenso da magia e você precisa disparar outra Bola de Fogo para o derrotar, mas no fim você o vence.",
+			            "damage": 5
                     },
                     {
                         "id": 2,
-                        "text": "3",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Atacar o Ogro com sua Magia: Mísseis Mágicos.",
+                        "score": 5,
+                        "consequence": "Você o ataca com seus mísseis mágicos de forma contínua, enquanto ele arremessa pedras em você, mas ele é derrotado no fim.",
+			            "damage": 5
                     },
                     {
                         "id": 3,
-                        "text": "3",
+                        "text": "Usar sua Magia: Sono.",
                         "score": -5,
-                        "consequence": ""
+                        "consequence": "Você usa sua magia e foge, mas ele acorda e o persegue pelo cheiro por muito tempo até que você o derrotar com seus Mísseis Mágicos.",
+			            "damage": 10
                     },
                     {
                         "id": 4,
-                        "text": "3",
+                        "text": "Se esconder do Ogro.",
                         "score": -10,
-                        "consequence": ""
+                        "consequence": "Ele o persegue pelo cheiro, logo você se toca que não há como o evitar e entra em combate direto, o vencendo eventualmente.",
+			            "damage": 10
                     }
                 ]
             },
@@ -231,27 +243,31 @@
                 "options":[
                     {
                         "id": 1,
-                        "text": "4",
-                        "score": 5,
-                        "consequence": ""
+                        "text": "Fugir do reino.",
+                        "score": -10,
+                        "consequence": "Você desvia seu caminho e vai em direção às fronteiras, escondendo sua identidade.",
+			"damage": 0
                     },
                     {
                         "id": 2,
-                        "text": "4",
-                        "score": 0,
-                        "consequence": ""
+                        "text": "Ir acertar as contas com o Rei.",
+                        "score": 10,
+                        "consequence": "Você vai a caminho do palácio, com suas armas e seu anel, resolver de uma vez por todas o ocorrido e os enfrentando se necessário.",
+			"damage": 10
                     },
                     {
                         "id": 3,
-                        "text": "4",
-                        "score": -5,
-                        "consequence": ""
+                        "text": "",
+                        "score": 0,
+                        "consequence": "",
+			            "damage": 0
                     },
                     {
                         "id": 4,
-                        "text": "4",
-                        "score": -10,
-                        "consequence": ""
+                        "text": "",
+                        "score": 0,
+                        "consequence": "",
+			            "damage": 0
                     }
                 ]
             }

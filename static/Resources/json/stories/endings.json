@@ -1,52 +1,52 @@
 [
     {
         "scoring": "000",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
+        "icon": "static/Resources/images/scenarios/ending_0.png",
         "text": "Seu herói não aguentou aos ferimentos fatais."
     },
     {
         "scoring": "111",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 1."
+        "icon": "static/Resources/images/scenarios/ending_1.png",
+        "text": "Você devolve a coroa ao seu local, você sente o frio que cobria esta terra esvaindo e a vida correndo novamente. Você caminha pela floresta enquanto ela se recupera, como uma primavera após um rigoroso inverno onde aves cantam alegremente. Você vê os rios correndo novamente e tudo ao seu redor está em paz. As ambições do rei não são mais uma ameaça, mas você agora é um foragido, então parte destas terras, em busca de paz ou de uma nova aventura para sua vida."
     },
     {
         "scoring": "112",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 2."
+        "icon": "static/Resources/images/scenarios/ending_1.png",
+        "text": "Você devolve a coroa ao seu local, você sente o calor intenso que cobria esta terra esvaindo e a vida correndo novamente. Você caminha pela floresta enquanto ela se recupera, com uma chuva intensa e cheia de vida após uma seca que traz a esperança aos seres. Você vê os rios sendo tomados pela água e correndo novamente e tudo ao seu redor está em paz. As ambições do rei não são mais uma ameaça, mas você agora é um foragido, então parte destas terras, em busca de paz ou de uma nova aventura para sua vida."
     },
     {
         "scoring": "121",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 3."
+        "icon": "static/Resources/images/scenarios/ending_2.png",
+        "text": "Você pegou suas coisas e fugiu da região, escondendo sua identidade. O rei não terá notícias de você, mas a coroa continuará ameaçada e podendo ser tomada por outras pessoas. Resta agora confiar na sorte que ele não mandará ninguém atrás de você nem atrás da coroa."
     },
     {
         "scoring": "122",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 4."
+        "icon": "static/Resources/images/scenarios/ending_2.png",
+        "text": "Você pegou suas coisas e fugiu da região, escondendo sua identidade. O rei não terá notícias de você, mas a coroa continuará ameaçada e podendo ser tomada por outras pessoas. Resta agora confiar na sorte que ele não mandará ninguém atrás de você nem atrás da coroa."
     },
     {
         "scoring": "211",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 5."
+        "icon": "static/Resources/images/scenarios/ending_3.png",
+        "text": "Você se tornou a besta e saiu destruindo tudo em seu caminho em uma fúria descontrolada. Haviam muitos guardas ali que o enfrentaram e caíram, você matou muitos inocentes que tentavam fugir, mas no fim das contas você caiu para as armas de cerco no local. Seu corpo jazia morto no chão, quando as atuais autoridades tomaram a coroa que jazia ao seu lado. O que farão com ela? Uma pergunta que não cabe mais a você fazer."
     },
     {
         "scoring": "212",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 6."
+        "icon": "static/Resources/images/scenarios/ending_3.png",
+        "text": "Você se tornou a besta e saiu destruindo tudo em seu caminho em uma fúria descontrolada. Haviam muitos guardas ali que o enfrentaram e caíram, você matou muitos inocentes que tentavam fugir, mas no fim das contas você caiu para as armas de cerco no local. Seu corpo jazia morto no chão, quando as atuais autoridades tomaram a coroa que jazia ao seu lado. O que farão com ela? Uma pergunta que não cabe mais a você fazer."
     },
     {
         "scoring": "221",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 7."
+        "icon": "static/Resources/images/scenarios/ending_4.png",
+        "text": "Você volta ao reino, e pede audiência com o Rei, mesmo explicando não aceita sua decisão e exige que você seja executado. Os poderes do Anel do Gelo se mostram implacáveis na luta e você congela a todos ali, os transformando em estátuas de gelo. Você sai e nenhum poder é suficiente para o parar. Você vai embora do reino em busca de uma terra pacífica, agora que tudo está resolvido e o único que sabe a localização exata da coroa é você."
     },
     {
         "scoring": "222",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "ENDING 8."
+        "icon": "static/Resources/images/scenarios/ending_4.png",
+        "text": "Você volta ao reino, e pede audiência com o Rei, mesmo explicando não aceita sua decisão e exige que você seja executado. Os poderes do Anel do Fogo se mostram implacáveis na luta e você os dizima ali, reduzindo-os a cinzas. Você sai e nenhum poder é suficiente para o parar. Você vai embora do reino em busca de uma terra pacífica, agora que tudo está resolvido e o único que sabe a localização exata da coroa é você."
     },
     {
         "scoring": "999",
-        "icon": "static/Resources/images/scenarios/act_1_1.png",
-        "text": "Unescored."
+        "icon": "static/Resources/images/scenarios/ending_0.png",
+        "text": "Você lutou bravamente até o final, fazendo o que julgava ser o certo e teve sucesso em sua última decisão, mas as feridas da batalha foram fundas demais para você poder se recuperar. A vida abandona seu corpo após terminar sua missão, e você parte em paz sabendo que fez o possível."
     }
 ]
